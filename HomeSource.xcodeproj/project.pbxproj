@@ -14,6 +14,15 @@
 		4686D7F01CC8DAE7001EC1A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4686D7EE1CC8DAE7001EC1A5 /* LaunchScreen.storyboard */; };
 		4686D7FB1CC8DAE8001EC1A5 /* HomeSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D7FA1CC8DAE8001EC1A5 /* HomeSourceTests.swift */; };
 		4686D8061CC8DAE8001EC1A5 /* HomeSourceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8051CC8DAE8001EC1A5 /* HomeSourceUITests.swift */; };
+		5EAD3B871CC8E04A00CD35B5 /* HomeSourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B861CC8E04A00CD35B5 /* HomeSourceService.swift */; };
+		5EAD3B891CC8E0CB00CD35B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B881CC8E0CB00CD35B5 /* User.swift */; };
+		5EAD3B8B1CC8E41700CD35B5 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B8A1CC8E41700CD35B5 /* Campaign.swift */; };
+		5EAD3B8D1CC8E4C500CD35B5 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B8C1CC8E4C500CD35B5 /* Goal.swift */; };
+		5EAD3B8F1CC8E9EB00CD35B5 /* HomeSourceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B8E1CC8E9EB00CD35B5 /* HomeSourceServiceTests.swift */; };
+		5EAD3B901CC8EA0200CD35B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B881CC8E0CB00CD35B5 /* User.swift */; };
+		5EAD3B911CC8EA0200CD35B5 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B8A1CC8E41700CD35B5 /* Campaign.swift */; };
+		5EAD3B921CC8EA0200CD35B5 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B8C1CC8E4C500CD35B5 /* Goal.swift */; };
+		5EAD3B931CC8EA0200CD35B5 /* HomeSourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B861CC8E04A00CD35B5 /* HomeSourceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,11 @@
 		4686D8011CC8DAE8001EC1A5 /* HomeSourceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeSourceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4686D8051CC8DAE8001EC1A5 /* HomeSourceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSourceUITests.swift; sourceTree = "<group>"; };
 		4686D8071CC8DAE8001EC1A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EAD3B861CC8E04A00CD35B5 /* HomeSourceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSourceService.swift; sourceTree = "<group>"; };
+		5EAD3B881CC8E0CB00CD35B5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5EAD3B8A1CC8E41700CD35B5 /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
+		5EAD3B8C1CC8E4C500CD35B5 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		5EAD3B8E1CC8E9EB00CD35B5 /* HomeSourceServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSourceServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +117,9 @@
 				4686D7EC1CC8DAE7001EC1A5 /* Assets.xcassets */,
 				4686D7EE1CC8DAE7001EC1A5 /* LaunchScreen.storyboard */,
 				4686D7F11CC8DAE7001EC1A5 /* Info.plist */,
+				5EAD3B831CC8E01200CD35B5 /* model */,
+				5EAD3B841CC8E01200CD35B5 /* service */,
+				5EAD3B851CC8E01200CD35B5 /* util */,
 			);
 			path = HomeSource;
 			sourceTree = "<group>";
@@ -112,6 +129,7 @@
 			children = (
 				4686D7FA1CC8DAE8001EC1A5 /* HomeSourceTests.swift */,
 				4686D7FC1CC8DAE8001EC1A5 /* Info.plist */,
+				5EAD3B8E1CC8E9EB00CD35B5 /* HomeSourceServiceTests.swift */,
 			);
 			path = HomeSourceTests;
 			sourceTree = "<group>";
@@ -123,6 +141,31 @@
 				4686D8071CC8DAE8001EC1A5 /* Info.plist */,
 			);
 			path = HomeSourceUITests;
+			sourceTree = "<group>";
+		};
+		5EAD3B831CC8E01200CD35B5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5EAD3B881CC8E0CB00CD35B5 /* User.swift */,
+				5EAD3B8A1CC8E41700CD35B5 /* Campaign.swift */,
+				5EAD3B8C1CC8E4C500CD35B5 /* Goal.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5EAD3B841CC8E01200CD35B5 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				5EAD3B861CC8E04A00CD35B5 /* HomeSourceService.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		5EAD3B851CC8E01200CD35B5 /* util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +299,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EAD3B891CC8E0CB00CD35B5 /* User.swift in Sources */,
 				4686D7E81CC8DAE7001EC1A5 /* ViewController.swift in Sources */,
+				5EAD3B871CC8E04A00CD35B5 /* HomeSourceService.swift in Sources */,
+				5EAD3B8B1CC8E41700CD35B5 /* Campaign.swift in Sources */,
+				5EAD3B8D1CC8E4C500CD35B5 /* Goal.swift in Sources */,
 				4686D7E61CC8DAE7001EC1A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4686D7FB1CC8DAE8001EC1A5 /* HomeSourceTests.swift in Sources */,
+				5EAD3B931CC8EA0200CD35B5 /* HomeSourceService.swift in Sources */,
+				5EAD3B911CC8EA0200CD35B5 /* Campaign.swift in Sources */,
+				5EAD3B8F1CC8E9EB00CD35B5 /* HomeSourceServiceTests.swift in Sources */,
+				5EAD3B921CC8EA0200CD35B5 /* Goal.swift in Sources */,
+				5EAD3B901CC8EA0200CD35B5 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +534,7 @@
 				4686D80C1CC8DAE8001EC1A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4686D80D1CC8DAE8001EC1A5 /* Build configuration list for PBXNativeTarget "HomeSourceTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +543,7 @@
 				4686D80F1CC8DAE8001EC1A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4686D8101CC8DAE8001EC1A5 /* Build configuration list for PBXNativeTarget "HomeSourceUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +552,7 @@
 				4686D8121CC8DAE8001EC1A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
