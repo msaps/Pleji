@@ -8,15 +8,28 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var historyTableView: UITableView!
     
+    private var history : [UserDonation]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
+        
+        historyTableView.delegate = self
+        historyTableView.dataSource = self
+        
+        updateView()
+        
+        if let user = HomeSourceService.instance().getUser() {
+            self.history = user.getPreviousDonation()
+        }
+        
+        historyTableView.reloadData()
     }
     
     private func updateView() {
@@ -33,5 +46,25 @@ class ProfileViewController: UIViewController {
     
     @IBAction func doneButtonPressed(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    ///MARK: tableview
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let history = self.history else {
+            return 0
+        }
+        
+        return history.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("historyCell", forIndexPath: indexPath) as! HistoryTableViewCell
+        
+        if let history = self.history {
+            cell.userDontation = history[indexPath.row]
+        }
+        
+        return cell
     }
 }

@@ -42,7 +42,7 @@ class Goal: NSObject {
         return formatString(self.current)
     }
     
-    private func formatString(value : Int) -> String {
+    func formatString(value : Int) -> String {
         var currentString = "";
         
         if let prefix = self.prefix {
