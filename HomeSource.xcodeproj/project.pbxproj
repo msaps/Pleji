@@ -12,7 +12,7 @@
 		4686D81B1CC8E500001EC1A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4686D8191CC8E500001EC1A5 /* Assets.xcassets */; };
 		4686D81C1CC8E500001EC1A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4686D81A1CC8E500001EC1A5 /* LaunchScreen.storyboard */; };
 		4686D8221CC8E513001EC1A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4686D8201CC8E513001EC1A5 /* Main.storyboard */; };
-		4686D8271CC8E597001EC1A5 /* CampainDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8261CC8E597001EC1A5 /* CampainDetailsViewController.swift */; };
+		4686D8271CC8E597001EC1A5 /* CampaignDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8261CC8E597001EC1A5 /* CampaignDetailsViewController.swift */; };
 		4686D8291CC8E619001EC1A5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8281CC8E619001EC1A5 /* SignInViewController.swift */; };
 		4686D82B1CC8E630001EC1A5 /* PledgeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D82A1CC8E630001EC1A5 /* PledgeDetailsViewController.swift */; };
 		4686D82D1CC8E6F6001EC1A5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D82C1CC8E6F6001EC1A5 /* ProfileViewController.swift */; };
@@ -20,7 +20,6 @@
 		4686D8311CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8301CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift */; };
 		4686D83C1CC91B78001EC1A5 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D83B1CC91B78001EC1A5 /* DiscoverViewController.swift */; };
 		4686D83E1CC933CC001EC1A5 /* HomeSourceComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D83D1CC933CC001EC1A5 /* HomeSourceComponents.swift */; };
-		5E45F9531CC8EFD5008F186D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E45F9521CC8EFD5008F186D /* Info.plist */; };
 		5E45F9561CC8F2F5008F186D /* campaigns.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E45F9551CC8F2F5008F186D /* campaigns.json */; };
 		5E45F95B1CC900FD008F186D /* HomeSourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B861CC8E04A00CD35B5 /* HomeSourceService.swift */; };
 		5E45F95C1CC90101008F186D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B881CC8E0CB00CD35B5 /* User.swift */; };
@@ -64,7 +63,7 @@
 		4686D8191CC8E500001EC1A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4686D81A1CC8E500001EC1A5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4686D8201CC8E513001EC1A5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		4686D8261CC8E597001EC1A5 /* CampainDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampainDetailsViewController.swift; sourceTree = "<group>"; };
+		4686D8261CC8E597001EC1A5 /* CampaignDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignDetailsViewController.swift; sourceTree = "<group>"; };
 		4686D8281CC8E619001EC1A5 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4686D82A1CC8E630001EC1A5 /* PledgeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PledgeDetailsViewController.swift; sourceTree = "<group>"; };
 		4686D82C1CC8E6F6001EC1A5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -207,7 +206,7 @@
 				4686D8201CC8E513001EC1A5 /* Main.storyboard */,
 				4686D8281CC8E619001EC1A5 /* SignInViewController.swift */,
 				4686D83B1CC91B78001EC1A5 /* DiscoverViewController.swift */,
-				4686D8261CC8E597001EC1A5 /* CampainDetailsViewController.swift */,
+				4686D8261CC8E597001EC1A5 /* CampaignDetailsViewController.swift */,
 				4686D82A1CC8E630001EC1A5 /* PledgeDetailsViewController.swift */,
 				4686D82C1CC8E6F6001EC1A5 /* ProfileViewController.swift */,
 				4686D82E1CC8E715001EC1A5 /* OnboardingViewController.swift */,
@@ -365,7 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E45F9531CC8EFD5008F186D /* Info.plist in Resources */,
 				4686D8221CC8E513001EC1A5 /* Main.storyboard in Resources */,
 				5E45F9561CC8F2F5008F186D /* campaigns.json in Resources */,
 				4686D81C1CC8E500001EC1A5 /* LaunchScreen.storyboard in Resources */,
@@ -455,7 +453,7 @@
 				4686D8291CC8E619001EC1A5 /* SignInViewController.swift in Sources */,
 				5E45F95D1CC90101008F186D /* Campaign.swift in Sources */,
 				5E45F95C1CC90101008F186D /* User.swift in Sources */,
-				4686D8271CC8E597001EC1A5 /* CampainDetailsViewController.swift in Sources */,
+				4686D8271CC8E597001EC1A5 /* CampaignDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
