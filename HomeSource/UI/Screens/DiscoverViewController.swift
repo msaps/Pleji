@@ -11,6 +11,23 @@ import GradientCircularProgress
 
 class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
+    // MARK - Properties
+    @IBOutlet var collectionView: UICollectionView?
+    var campaigns: Array<Campaign>?
+    
+    // MARK - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        HomeSourceService.instance().getCampaigns { (campaigns, error) in
+            if error == nil {
+                self.campaigns = campaigns
+                self.collectionView?.reloadData()
+            }
+        }
+    }
+    
     // MARK - UICollectionViewDataSource
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -18,12 +35,15 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return (self.campaigns?.count)!
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("campaignCell", forIndexPath: indexPath) as! DiscoverCollectionViewCell
+        let campaign = self.campaigns![indexPath.row]
         
+        cell.titleLabel?.text = campaign.title
+        cell.detailsLabel?.text = campaign.campaignDescription
         cell.imageView?.image = UIImage(named: "logo")
         cell.backgroundImageView?.image = UIImage(named: "hero_image_header")
         
