@@ -23,6 +23,49 @@ class HomeSourceNavigationBar: UINavigationBar {
     
 }
 
+@IBDesignable
+class CircularView: UIView {
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.layer.cornerRadius = self.bounds.size.width / 2.0
+    }
+}
+
+@IBDesignable
+class RoundRectButton: UIButton {
+    
+    @IBInspectable var normalBackgroundColor: UIColor? {
+        willSet {
+            self.backgroundColor = newValue
+        }
+    }
+    @IBInspectable var highlightBackgroundColor: UIColor?
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.normalBackgroundColor = self.backgroundColor!
+        self.highlightBackgroundColor = self.backgroundColor!.colorWithAlphaComponent(0.75)
+    }
+    
+    override var highlighted: Bool {
+        willSet {
+            UIView.animateWithDuration(0.25) { 
+                self.backgroundColor = newValue ? self.highlightBackgroundColor : self.normalBackgroundColor
+            }
+        }
+    }
+    
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.layer.cornerRadius = 4.0
+    }
+}
+
 public struct HomeSourceCircularProgressStyle : StyleProperty {
     /*** style properties **********************************************************************************/
     

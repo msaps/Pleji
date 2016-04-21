@@ -387,16 +387,16 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qat-HP-0SP" userLabel="Text Container View">
-                                                            <rect key="frame" x="209" y="92.5" width="182.5" height="55.5"/>
+                                                            <rect key="frame" x="202.5" y="91.5" width="195.5" height="58"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaign Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agC-M6-YeL">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="182.5" height="33.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="195.5" height="36"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaign Organiser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR1-lE-9is">
-                                                                    <rect key="frame" x="0.0" y="37.5" width="182.5" height="18"/>
+                                                                    <rect key="frame" x="0.0" y="40" width="195.5" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -429,12 +429,23 @@
                                                         <constraint firstItem="vtl-rC-R7f" firstAttribute="leading" secondItem="Q1a-Me-7SR" secondAttribute="leading" id="v3V-TI-0AJ"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDW-bs-Coy">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDW-bs-Coy" customClass="CircularView" customModule="HomeSource" customModuleProvider="target">
                                                     <rect key="frame" x="250" y="190" width="100" height="100"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDQ-tF-PkA">
+                                                            <rect key="frame" x="8" y="30.5" width="84" height="38.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="0.90000000000000002" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="uDQ-tF-PkA" secondAttribute="trailing" constant="8" id="3Fo-ky-Kb1"/>
                                                         <constraint firstAttribute="height" constant="100" id="PSL-fA-gGl"/>
+                                                        <constraint firstItem="uDQ-tF-PkA" firstAttribute="centerY" secondItem="BDW-bs-Coy" secondAttribute="centerY" id="U1Y-4Z-d6o"/>
                                                         <constraint firstAttribute="width" constant="100" id="fGY-sJ-Wl4"/>
+                                                        <constraint firstItem="uDQ-tF-PkA" firstAttribute="leading" secondItem="BDW-bs-Coy" secondAttribute="leading" constant="8" id="ukG-bK-LBf"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -451,6 +462,8 @@
                                         <size key="customSize" width="600" height="290"/>
                                         <connections>
                                             <outlet property="backgroundImageView" destination="vtl-rC-R7f" id="PjF-LQ-viz"/>
+                                            <outlet property="progressContainerView" destination="BDW-bs-Coy" id="QpY-zY-X7k"/>
+                                            <outlet property="progressLabel" destination="uDQ-tF-PkA" id="469-ij-BIp"/>
                                             <outlet property="subtitleLabel" destination="gR1-lE-9is" id="NCi-Sz-K7a"/>
                                             <outlet property="titleLabel" destination="agC-M6-YeL" id="xHv-YX-sdo"/>
                                         </connections>
@@ -463,13 +476,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL TITLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqy-GA-uuT">
-                                                    <rect key="frame" x="8" y="8" width="94" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <rect key="frame" x="8" y="8" width="85" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JkO-wd-cbh" userLabel="Content View">
-                                                    <rect key="frame" x="0.0" y="41" width="600" height="294"/>
+                                                    <rect key="frame" x="0.0" y="38" width="600" height="297"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQW-ya-luO" userLabel="Inner Cell View">
                                                             <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
@@ -580,16 +593,25 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wF9-DK-S0z" userLabel="Button Container">
-                                                            <rect key="frame" x="0.0" y="182" width="600" height="112"/>
+                                                            <rect key="frame" x="0.0" y="182" width="600" height="115"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQx-9c-gZY">
-                                                                    <rect key="frame" x="150" y="31" width="300" height="50"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQx-9c-gZY" customClass="RoundRectButton" customModule="HomeSource" customModuleProvider="target">
+                                                                    <rect key="frame" x="150" y="32.5" width="300" height="50"/>
                                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="300" id="eab-QY-REK"/>
                                                                         <constraint firstAttribute="height" constant="50" id="sXf-mG-Fsv"/>
                                                                     </constraints>
-                                                                    <state key="normal" title="Button"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                                                    <state key="normal" title="Pledge"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
+                                                                            <color key="value" red="0.25882352941176467" green="0.81568627450980391" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                                            <color key="value" red="0.20702773352829565" green="0.66182008861236796" blue="0.29881036715184472" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

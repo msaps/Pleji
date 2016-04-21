@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GradientCircularProgress
 
 class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
@@ -58,6 +59,12 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
             headerCell.titleLabel?.text = campaign?.title
             headerCell.subtitleLabel?.text = campaign?.organiser
             
+            let progress = GradientCircularProgress()
+            let progressView = progress.showAtRatio(frame: headerCell.progressContainerView!.bounds, display: true, style: CampaignDetailsCircularProgressStyle())
+            progressView?.backgroundColor = UIColor.clearColor()
+            progress.updateRatio(0.4)
+            headerCell.progressContainerView?.addSubview(progressView!)
+            
             cell = headerCell
         
         default:
@@ -106,4 +113,38 @@ class CampaignHeaderCell: UICollectionViewCell {
     @IBOutlet var titleLabel: UILabel?
     @IBOutlet var subtitleLabel: UILabel?
     
+    @IBOutlet var progressContainerView: UIView?
+    @IBOutlet var progressLabel: UILabel?
+
+}
+
+public struct CampaignDetailsCircularProgressStyle : StyleProperty {
+    /*** style properties **********************************************************************************/
+    
+    // Progress Size
+    public var progressSize: CGFloat = 100
+    
+    // Gradient Circular
+    public var arcLineWidth: CGFloat = 4
+    public var startArcColor: UIColor = UIColor.greenColor()
+    public var endArcColor: UIColor = UIColor.greenColor()
+    
+    // Base Circular
+    public var baseLineWidth: CGFloat? = 4
+    public var baseArcColor: UIColor? = UIColor.clearColor()
+    
+    // Ratio
+    public var ratioLabelFont: UIFont? = UIFont.systemFontOfSize(0.0, weight: UIFontWeightLight)
+    public var ratioLabelFontColor: UIColor? = UIColor.whiteColor()
+    
+    // Message
+    public var messageLabelFont: UIFont? = UIFont.systemFontOfSize(16.0)
+    public var messageLabelFontColor: UIColor? = UIColor.whiteColor()
+    
+    // Background
+    public var backgroundStyle: BackgroundStyles = .None
+    
+    /*** style properties **********************************************************************************/
+    
+    public init() {}
 }
