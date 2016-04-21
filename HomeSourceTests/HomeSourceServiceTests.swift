@@ -28,6 +28,19 @@ class HomeSourceServiceTests: XCTestCase {
     
     func testGetCampaignsReturnsData() {
         service.getCampaigns({campaigns, error in
+            
+            //print all campaigns
+            if let campaigns = campaigns {
+                for campaign in campaigns {
+                    print("Campaign = "+campaign.title);
+                    
+                    print("Goals")
+                    for goal in campaign.goals {
+                        print(goal.getCurrentString() + " - " + String(goal.getPercentageOfGoal() * 100.0) )
+                    }
+                }
+            }
+            
             XCTAssertNotNil(campaigns)
         })
     }

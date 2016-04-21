@@ -15,18 +15,50 @@ class Goal: NSObject {
     //current
     //subtitle
     
-    private var icon: UIImage
-    private var title: String
-    private var target: Int
-    private var current: Int
-    private var subtitle: String
+    var icon: UIImage
+    var title: String
+    var target: Int
+    var current: Int
+    var subtitle: String
+    
+    var suffix: (singular : String, plural : String)?
+    var prefix: (singular : String, plural : String)?
     
     override init() {
-        self.icon = UIImage(named: "")!
+        self.icon = UIImage(named: "money")!
         self.title = "Sleeping bags"
         self.target = 100
         self.current = 28
         self.subtitle = "Warm weather sleeping bags"
+    }
+    
+    func getTargetString() -> String {
+        return formatString(self.target)
+    }
+    
+    func getCurrentString() -> String {
+        return formatString(self.current)
+    }
+    
+    private func formatString(value : Int) -> String {
+        var currentString = "";
+        
+        if let prefix = self.prefix {
+            currentString += (self.current==1 ? prefix.singular : prefix.plural) + " "
+        }
+        
+        currentString += String(value)
+        
+        if let suffix = self.suffix {
+            currentString += " " + (self.current==1 ? suffix.singular : suffix.plural)
+        }
+        
+        return currentString
+    }
+    
+    func getPercentageOfGoal() -> Float {
+        let percentage = Float(self.current) / Float(self.target)
+        return percentage
     }
     
 }

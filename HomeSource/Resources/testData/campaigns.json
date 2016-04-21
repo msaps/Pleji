@@ -4,6 +4,48 @@
                   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                   
                   "image": "http://placekitten.com/780/460",
-                  "endDate": "2016-04-21T11:43:38+00:00"
+                  "endDate": "2016-04-21T11:43:38+00:00",
+                  "goals": [{
+                            "title": "Socks",
+                            "subtitle": "We need socks for winter",
+                            "target": 100,
+                            "current": 46,
+                            "suffix": {
+                            "singular": "pair",
+                            "plural": "pairs"
+                            }
+                            }]
+                  }, {
+                  "title": "Campign Title 2",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  
+                  "image": "http://placekitten.com/780/460",
+                  "endDate": "2016-04-21T11:43:38+00:00",
+                  "goals": [{
+                            "title": "Funding",
+                            "subtitle": "Money for housing project",
+                            "target": 536,
+                            "current": 309,
+                            "prefix": {
+                            "singular": "£",
+                            "plural": "£"
+                            }
+                            }]
+                  }, {
+                  "title": "Campign Title 3",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  
+                  "image": "http://placekitten.com/780/460",
+                  "endDate": "2016-04-21T11:43:38+00:00",
+                  "goals": [{
+                            "title": "Volunteers",
+                            "subtitle": "We need you",
+                            "target": 38,
+                            "current": 1,
+                            "suffix": {
+                            "singular": "hour",
+                            "plural": "hours"
+                            }
+                            }]
                   }]
 }

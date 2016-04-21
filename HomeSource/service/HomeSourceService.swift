@@ -77,8 +77,7 @@ public class HomeSourceService: NSObject {
         let json = JSON(data: jsonData)
         
         var campaigns = [Campaign]()
-        for (i, campaignData) in json["campaigns"] {
-            print("Campiagn found "+i+" = "+campaignData.debugDescription);
+        for (_, campaignData) in json["campaigns"] {
             
             guard
                 let title = campaignData["title"].string,
@@ -95,12 +94,46 @@ public class HomeSourceService: NSObject {
             campaign.campaignDescription = description
             campaign.endDate = endDate
             campaigns.append(campaign)
+            
+            //add goals to out campaign
+            
+            for (_, goalData) in campaignData["goals"] {
+                addGoal(campaign, goalData: goalData)
+            }
         }
         
         completion(campaigns: campaigns, error: nil)
     }
     
-    
+    private func addGoal(campaign: Campaign, goalData: JSON) {
+        
+        guard
+            let title = goalData["title"].string,
+            let subtitle = goalData["subtitle"].string,
+            let target = goalData["target"].int,
+            let current = goalData["current"].int
+            else {
+                print("Invalid goal json object")
+                return
+        }
+        
+        let goal = Goal()
+        goal.title = title
+        goal.subtitle = subtitle
+        goal.target = target
+        goal.current = current
+        if let singular = goalData["suffix"]["singular"].string,
+            let plural = goalData["suffix"]["plural"].string {
+            goal.suffix = (singular, plural)
+        }
+        if let singular = goalData["prefix"]["singular"].string,
+            let plural = goalData["prefix"]["plural"].string {
+            goal.prefix = (singular, plural)
+        }
+        campaign.goals.append(goal)
+    }
+
+
     private func dateFromISOString(string: String) -> NSDate? {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
