@@ -1,0 +1,3 @@
+language: objective-c
+osx_image: xcode7.3
+script: xcodebuild -workspace "Example/HomeSource.xcworkspace" -scheme "HomeSource" -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
