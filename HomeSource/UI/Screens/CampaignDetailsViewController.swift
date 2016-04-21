@@ -53,6 +53,8 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
             let headerCell = collectionView.dequeueReusableCellWithReuseIdentifier("campaignHeaderCell", forIndexPath: indexPath) as! CampaignHeaderCell
             
             headerCell.backgroundImageView?.image = UIImage(named: "hero_image_header")
+            headerCell.titleLabel?.text = campaign?.title
+            headerCell.subtitleLabel?.text = campaign?.organiser
             
             cell = headerCell
         }
@@ -89,4 +91,6 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
 class CampaignHeaderCell: UICollectionViewCell {
     
     @IBOutlet var backgroundImageView: UIImageView?
+    @IBOutlet var titleLabel: UILabel?
+    @IBOutlet var subtitleLabel: UILabel?
 }

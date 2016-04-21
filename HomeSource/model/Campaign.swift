@@ -22,6 +22,7 @@ class Campaign: NSObject {
     var title: String
     var logo: UIImage? //Images are optional at this point
     var endDate: NSDate
+    var organiser: String
     
     override init() {
         
@@ -30,6 +31,7 @@ class Campaign: NSObject {
         self.goals = [Goal]()
         self.campaignDescription = "This is a test campaign"
         self.title = "We need people!"
+        self.organiser = "Charity Test"
         self.logo = nil;
         self.endDate = NSDate(timeIntervalSinceNow: 60 * 60 * 24 * 7)
     }

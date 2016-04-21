@@ -83,6 +83,7 @@ public class HomeSourceService: NSObject {
                 let title = campaignData["title"].string,
                 let description = campaignData["description"].string,
                 let dateString = campaignData["endDate"].string,
+                let organiser = campaignData["organiser"].string,
                 let endDate = dateFromISOString(dateString)
                 else {
                     print("Invalid json object")
@@ -93,6 +94,7 @@ public class HomeSourceService: NSObject {
             campaign.title = title
             campaign.campaignDescription = description
             campaign.endDate = endDate
+            campaign.organiser = organiser
             campaign.image = campaignData["image"].string
             campaigns.append(campaign)
             

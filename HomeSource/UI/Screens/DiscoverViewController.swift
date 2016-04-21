@@ -100,28 +100,36 @@ class DiscoverTimeRemainingView: UIView {
     
     var date: NSDate? {
         willSet {
-            let timePeriod = DTTimePeriod(startDate: NSDate(), endDate: newValue)
-            
-            var timeComponent = timePeriod.durationInDays()
-            var timeString: String
+            self.titleLabel?.text = self.timeRemainingStringForDate(newValue!)
+        }
+    }
+    
+    func timeRemainingStringForDate(date: NSDate?) -> String? {
+        if date == nil {
+            return nil
+        }
+        
+        let timePeriod = DTTimePeriod(startDate: NSDate(), endDate: date)
+        
+        var timeComponent = timePeriod.durationInDays()
+        var timeString: String
+        if timeComponent == 0 {
+            timeComponent = timePeriod.durationInHours()
             if timeComponent == 0 {
-                timeComponent = timePeriod.durationInHours()
+                timeComponent = timePeriod.durationInMinutes()
                 if timeComponent == 0 {
-                    timeComponent = timePeriod.durationInMinutes()
-                    if timeComponent == 0 {
-                        timeString = "Finishing now..."
-                    } else {
-                        timeString = String(format: "%i minutes left", NSInteger(timeComponent))
-                    }
+                    timeString = "Finishing now..."
                 } else {
-                    timeString = String(format: "%i hours left", NSInteger(timeComponent))
+                    timeString = String(format: "%i minutes left", NSInteger(timeComponent))
                 }
             } else {
-                timeString = String(format: "%i days left", NSInteger(timeComponent))
+                timeString = String(format: "%i hours left", NSInteger(timeComponent))
             }
-            
-            self.titleLabel?.text = timeString
+        } else {
+            timeString = String(format: "%i days left", NSInteger(timeComponent))
         }
+        
+        return timeString
     }
 }
 

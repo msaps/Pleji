@@ -436,6 +436,8 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="backgroundImageView" destination="vtl-rC-R7f" id="PjF-LQ-viz"/>
+                                            <outlet property="subtitleLabel" destination="gR1-lE-9is" id="NCi-Sz-K7a"/>
+                                            <outlet property="titleLabel" destination="agC-M6-YeL" id="xHv-YX-sdo"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
