@@ -306,10 +306,10 @@
             </objects>
             <point key="canvasLocation" x="2663" y="-587"/>
         </scene>
-        <!--Campain Details View Controller-->
+        <!--Campaign Details View Controller-->
         <scene sceneID="I8A-fx-zCZ">
             <objects>
-                <viewController storyboardIdentifier="CampainDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2bB-UT-GX6" customClass="CampainDetailsViewController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CampaignDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2bB-UT-GX6" customClass="CampaignDetailsViewController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3bc-s7-AIW"/>
                         <viewControllerLayoutGuide type="bottom" id="f6q-cc-DIq"/>

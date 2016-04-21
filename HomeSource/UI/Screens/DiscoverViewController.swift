@@ -33,7 +33,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
         if let index = indexPath?.row {
             let campaign = self.campaigns![index]
             
-            let detailsViewController = segue.destinationViewController as! CampainDetailsViewController
+            let detailsViewController = segue.destinationViewController as! CampaignDetailsViewController
             detailsViewController.campaign = campaign
         }
     }

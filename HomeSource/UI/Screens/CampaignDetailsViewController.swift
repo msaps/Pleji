@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CampainDetailsViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     // MARK - Properties
     
