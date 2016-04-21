@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1pO-nT-0Hw">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="xno-Ok-r2O">
+            <objects>
+                <navigationController id="1pO-nT-0Hw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zb2-8G-vcB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="p8s-ym-HEz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5I-dT-Bpe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219" y="524"/>
+        </scene>
+        <!--Authenticated Navigation Controller-->
+        <scene sceneID="VW7-4u-jOD">
+            <objects>
+                <navigationController id="j4r-3h-aqD" customClass="AuthenticatedNavigationController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qeZ-9t-8qz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OeH-Z6-zXz" kind="relationship" relationship="rootViewController" id="vqY-Up-Ozy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPd-nb-2kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="-587"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="7Nd-iV-jss">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OeH-Z6-zXz" customClass="ProfileViewController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gJU-EW-Khs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Muk-h0-KDS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rBa-T9-Jd5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="USG-Df-pGR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENK-Pi-r3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="-587"/>
+        </scene>
+        <!--Discover View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="DiscoverViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="DiscoverViewController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9A-Wr-ZYQ">
+                                <rect key="frame" x="277" y="285" width="47" height="30"/>
+                                <state key="normal" title="Details"/>
+                                <connections>
+                                    <segue destination="2bB-UT-GX6" kind="show" id="8J3-ec-rxj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N9A-Wr-ZYQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RI1-eD-UiO"/>
+                            <constraint firstItem="N9A-Wr-ZYQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pXZ-c4-csb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hiE-zD-G3e">
+                        <barButtonItem key="rightBarButtonItem" title="Profile" id="XI0-Lv-i3e">
+                            <connections>
+                                <segue destination="j4r-3h-aqD" kind="presentation" id="hFD-zm-RO1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556" y="524"/>
+        </scene>
+        <!--Sign In-->
+        <scene sceneID="3Do-Z3-FWL">
+            <objects>
+                <viewController storyboardIdentifier="SignInViewController" title="Sign In" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Adp-TI-zoa" customClass="SignInViewController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LVr-rh-VIU"/>
+                        <viewControllerLayoutGuide type="bottom" id="uIz-v1-tza"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bur-MZ-xfh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fd-SB-VtI">
+                                <rect key="frame" x="268" y="285" width="64" height="30"/>
+                                <state key="normal" title="Signed In"/>
+                                <connections>
+                                    <action selector="signedInPressed:" destination="Adp-TI-zoa" eventType="touchUpInside" id="cmT-Hg-35o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1fd-SB-VtI" firstAttribute="centerX" secondItem="Bur-MZ-xfh" secondAttribute="centerX" id="uOA-Yl-EwC"/>
+                            <constraint firstItem="1fd-SB-VtI" firstAttribute="centerY" secondItem="Bur-MZ-xfh" secondAttribute="centerY" id="xT5-QF-36F"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="diP-lr-GxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556" y="1340"/>
+        </scene>
+        <!--Authenticated Navigation Controller-->
+        <scene sceneID="THd-0B-Qqp">
+            <objects>
+                <navigationController id="ZYp-hy-3jI" customClass="AuthenticatedNavigationController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hxJ-6i-NNU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fbv-zz-eb6" kind="relationship" relationship="rootViewController" id="hjl-5E-gb6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onW-vQ-Kh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="-587"/>
+        </scene>
+        <!--Pledge-->
+        <scene sceneID="e7S-D2-8ju">
+            <objects>
+                <viewController storyboardIdentifier="PledgeDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fbv-zz-eb6" customClass="PledgeDetailsViewController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xw3-VP-Kha"/>
+                        <viewControllerLayoutGuide type="bottom" id="wSi-Nn-KDg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qF0-Ue-wZ6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pledge" id="x8b-ao-XoJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cel-Sk-GQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2663" y="-587"/>
+        </scene>
+        <!--Campain Details View Controller-->
+        <scene sceneID="I8A-fx-zCZ">
+            <objects>
+                <viewController storyboardIdentifier="CampainDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2bB-UT-GX6" customClass="CampainDetailsViewController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3bc-s7-AIW"/>
+                        <viewControllerLayoutGuide type="bottom" id="f6q-cc-DIq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kdN-fr-9l1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cJ-JP-eZw">
+                                <rect key="frame" x="276" y="285" width="48" height="30"/>
+                                <state key="normal" title="Pledge"/>
+                                <connections>
+                                    <segue destination="ZYp-hy-3jI" kind="presentation" id="PKB-27-pdi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7cJ-JP-eZw" firstAttribute="centerY" secondItem="kdN-fr-9l1" secondAttribute="centerY" id="foR-fO-nwo"/>
+                            <constraint firstItem="7cJ-JP-eZw" firstAttribute="centerX" secondItem="kdN-fr-9l1" secondAttribute="centerX" id="zU3-bv-qRt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2x-Yn-vDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318" y="524"/>
+        </scene>
+    </scenes>
+</document>
