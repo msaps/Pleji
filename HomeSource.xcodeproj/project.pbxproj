@@ -27,11 +27,15 @@
 		5E45F95E1CC90101008F186D /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B8C1CC8E4C500CD35B5 /* Goal.swift */; };
 		5E45F9601CC92750008F186D /* DonationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45F95F1CC92750008F186D /* DonationType.swift */; };
 		5E45F9611CC92862008F186D /* DonationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45F95F1CC92750008F186D /* DonationType.swift */; };
+		5E45F9631CC9392C008F186D /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45F9621CC9392C008F186D /* ColorButton.swift */; };
 		5EAD3B8F1CC8E9EB00CD35B5 /* HomeSourceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B8E1CC8E9EB00CD35B5 /* HomeSourceServiceTests.swift */; };
 		5EAD3B901CC8EA0200CD35B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B881CC8E0CB00CD35B5 /* User.swift */; };
 		5EAD3B911CC8EA0200CD35B5 /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B8A1CC8E41700CD35B5 /* Campaign.swift */; };
 		5EAD3B921CC8EA0200CD35B5 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B8C1CC8E4C500CD35B5 /* Goal.swift */; };
 		5EAD3B931CC8EA0200CD35B5 /* HomeSourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B861CC8E04A00CD35B5 /* HomeSourceService.swift */; };
+		5EB83DA81CC968D800A9C569 /* UserDonation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB83DA71CC968D800A9C569 /* UserDonation.swift */; };
+		5EB83DA91CC9698A00A9C569 /* UserDonation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB83DA71CC968D800A9C569 /* UserDonation.swift */; };
+		5EB83DAB1CC96DB500A9C569 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB83DAA1CC96DB500A9C569 /* HistoryTableViewCell.swift */; };
 		D5E14E2BF5BB30DE4C3ABE9E /* Pods_HomeSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3542C4DD609A585B57E58C3 /* Pods_HomeSource.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,11 +78,14 @@
 		5E45F9521CC8EFD5008F186D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		5E45F9551CC8F2F5008F186D /* campaigns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = campaigns.json; sourceTree = "<group>"; };
 		5E45F95F1CC92750008F186D /* DonationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationType.swift; sourceTree = "<group>"; };
+		5E45F9621CC9392C008F186D /* ColorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorButton.swift; path = HomeSource/UI/ColorButton.swift; sourceTree = SOURCE_ROOT; };
 		5EAD3B861CC8E04A00CD35B5 /* HomeSourceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSourceService.swift; sourceTree = "<group>"; };
 		5EAD3B881CC8E0CB00CD35B5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5EAD3B8A1CC8E41700CD35B5 /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
 		5EAD3B8C1CC8E4C500CD35B5 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		5EAD3B8E1CC8E9EB00CD35B5 /* HomeSourceServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSourceServiceTests.swift; sourceTree = "<group>"; };
+		5EB83DA71CC968D800A9C569 /* UserDonation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDonation.swift; sourceTree = "<group>"; };
+		5EB83DAA1CC96DB500A9C569 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		87FB42A28CD924F9A45790BA /* Pods-HomeSource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeSource.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeSource/Pods-HomeSource.debug.xcconfig"; sourceTree = "<group>"; };
 		940694948C0E21C9F195894F /* Pods-HomeSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeSource.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeSource/Pods-HomeSource.release.xcconfig"; sourceTree = "<group>"; };
 		A3542C4DD609A585B57E58C3 /* Pods_HomeSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +202,9 @@
 		4686D81E1CC8E513001EC1A5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5E45F9621CC9392C008F186D /* ColorButton.swift */,
 				4686D83D1CC933CC001EC1A5 /* HomeSourceComponents.swift */,
+				5EB83DAA1CC96DB500A9C569 /* HistoryTableViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -230,6 +239,7 @@
 				5EAD3B8A1CC8E41700CD35B5 /* Campaign.swift */,
 				5EAD3B8C1CC8E4C500CD35B5 /* Goal.swift */,
 				5E45F95F1CC92750008F186D /* DonationType.swift */,
+				5EB83DA71CC968D800A9C569 /* UserDonation.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -442,16 +452,19 @@
 			files = (
 				4686D82B1CC8E630001EC1A5 /* PledgeDetailsViewController.swift in Sources */,
 				4686D82F1CC8E715001EC1A5 /* OnboardingViewController.swift in Sources */,
+				5E45F9631CC9392C008F186D /* ColorButton.swift in Sources */,
 				4686D8311CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift in Sources */,
 				4686D83E1CC933CC001EC1A5 /* HomeSourceComponents.swift in Sources */,
 				5E45F95E1CC90101008F186D /* Goal.swift in Sources */,
 				5E45F95B1CC900FD008F186D /* HomeSourceService.swift in Sources */,
 				4686D7E61CC8DAE7001EC1A5 /* AppDelegate.swift in Sources */,
 				4686D82D1CC8E6F6001EC1A5 /* ProfileViewController.swift in Sources */,
+				5EB83DAB1CC96DB500A9C569 /* HistoryTableViewCell.swift in Sources */,
 				4686D83C1CC91B78001EC1A5 /* DiscoverViewController.swift in Sources */,
 				5E45F9601CC92750008F186D /* DonationType.swift in Sources */,
 				4686D8291CC8E619001EC1A5 /* SignInViewController.swift in Sources */,
 				5E45F95D1CC90101008F186D /* Campaign.swift in Sources */,
+				5EB83DA81CC968D800A9C569 /* UserDonation.swift in Sources */,
 				5E45F95C1CC90101008F186D /* User.swift in Sources */,
 				4686D8271CC8E597001EC1A5 /* CampaignDetailsViewController.swift in Sources */,
 			);
@@ -466,6 +479,7 @@
 				5EAD3B8F1CC8E9EB00CD35B5 /* HomeSourceServiceTests.swift in Sources */,
 				5E45F9611CC92862008F186D /* DonationType.swift in Sources */,
 				5EAD3B921CC8EA0200CD35B5 /* Goal.swift in Sources */,
+				5EB83DA91CC9698A00A9C569 /* UserDonation.swift in Sources */,
 				5EAD3B901CC8EA0200CD35B5 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

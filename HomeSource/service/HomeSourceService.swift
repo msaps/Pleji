@@ -42,9 +42,16 @@ public class HomeSourceService: NSObject {
     
     func login(completion: AuthCompletionBlock){
         
-        //TODO: Async login call
-        mUser = User();
-        completion(success: true, error: nil);
+        //Delay for two seconds then return a new user
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            NSThread.sleepForTimeInterval(2)
+            dispatch_async(dispatch_get_main_queue()) {
+                
+                self.mUser = User();
+                completion(success: true, error: nil);
+            }
+        }
     }
     
     func logout(completion: AuthCompletionBlock){

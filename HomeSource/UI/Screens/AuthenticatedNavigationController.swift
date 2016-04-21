@@ -14,6 +14,12 @@ class AuthenticatedNavigationController: UINavigationController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    
+    //@Merick - moved this to viewDidLoad - otherwise restorationID is nil.
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         if (HomeSourceService.instance().isLoggedIn() == false) {
             let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
