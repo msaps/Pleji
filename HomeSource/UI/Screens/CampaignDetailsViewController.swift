@@ -32,13 +32,15 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
     // MARK - UICollectionViewDataSource
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
             return 1
+        case 1:
+            return 2
         default:
             return 0
         }
@@ -49,7 +51,7 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
         
         switch indexPath.section {
 
-        default:
+        case 0:
             let headerCell = collectionView.dequeueReusableCellWithReuseIdentifier("campaignHeaderCell", forIndexPath: indexPath) as! CampaignHeaderCell
             
             headerCell.backgroundImageView?.image = UIImage(named: "hero_image_header")
@@ -57,7 +59,13 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
             headerCell.subtitleLabel?.text = campaign?.organiser
             
             cell = headerCell
+        
+        default:
+            let goalCell = collectionView.dequeueReusableCellWithReuseIdentifier("campaignGoalCell", forIndexPath: indexPath)
+            
+            cell = goalCell
         }
+        
         
         return cell
     }
@@ -67,12 +75,15 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-        let insets = flowLayout.sectionInset.left + flowLayout.sectionInset.right
+        let sectionInset = self.collectionView(collectionView, layout: collectionViewLayout, insetForSectionAtIndex: indexPath.section)
+        let insets = sectionInset.left + sectionInset.right
         let width = collectionView.bounds.size.width - insets
         
         switch indexPath.section {
         case 0:
             return CGSizeMake(width, 240)
+        case 1:
+            return CGSizeMake(width, 310)
         default:
             return CGSizeMake(width, 80)
         }
@@ -83,7 +94,7 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
         case 0:
             return UIEdgeInsetsZero
         default:
-            return UIEdgeInsetsMake(12, 12, 12, 12)
+            return UIEdgeInsetsMake(12, 0.0, 12, 0.0)
         }
     }
 }
