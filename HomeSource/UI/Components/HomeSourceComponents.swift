@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GradientCircularProgress
 
 class HomeSourceNavigationBar: UINavigationBar {
     
@@ -20,4 +21,35 @@ class HomeSourceNavigationBar: UINavigationBar {
                                                             forState: UIControlState.Normal)
     }
     
+}
+
+public struct HomeSourceCircularProgressStyle : StyleProperty {
+    /*** style properties **********************************************************************************/
+    
+    // Progress Size
+    public var progressSize: CGFloat = 80
+    
+    // Gradient Circular
+    public var arcLineWidth: CGFloat = 6
+    public var startArcColor: UIColor = UIColor.greenColor()
+    public var endArcColor: UIColor = UIColor.greenColor()
+    
+    // Base Circular
+    public var baseLineWidth: CGFloat? = 6
+    public var baseArcColor: UIColor? = UIColor.whiteColor().colorWithAlphaComponent(0.6)
+    
+    // Ratio
+    public var ratioLabelFont: UIFont? = UIFont(name: "Verdana-Bold", size: 0)
+    public var ratioLabelFontColor: UIColor? = UIColor.whiteColor()
+    
+    // Message
+    public var messageLabelFont: UIFont? = UIFont.systemFontOfSize(16.0)
+    public var messageLabelFontColor: UIColor? = UIColor.whiteColor()
+    
+    // Background
+    public var backgroundStyle: BackgroundStyles = .None
+    
+    /*** style properties **********************************************************************************/
+    
+    public init() {}
 }

@@ -74,14 +74,13 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         let sectionInset = self.collectionView(collectionView, layout: collectionViewLayout, insetForSectionAtIndex: indexPath.section)
         let insets = sectionInset.left + sectionInset.right
         let width = collectionView.bounds.size.width - insets
         
         switch indexPath.section {
         case 0:
-            return CGSizeMake(width, 240)
+            return CGSizeMake(width, 290)
         case 1:
             return CGSizeMake(width, 310)
         default:
@@ -93,6 +92,8 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
         switch section {
         case 0:
             return UIEdgeInsetsZero
+        case 1:
+            return UIEdgeInsetsMake(0.0, 0.0, 12, 0.0)
         default:
             return UIEdgeInsetsMake(12, 0.0, 12, 0.0)
         }
@@ -104,4 +105,5 @@ class CampaignHeaderCell: UICollectionViewCell {
     @IBOutlet var backgroundImageView: UIImageView?
     @IBOutlet var titleLabel: UILabel?
     @IBOutlet var subtitleLabel: UILabel?
+    
 }
