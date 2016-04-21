@@ -1,15 +1,16 @@
 //
-//  HomeSourceTests.swift
-//  HomeSourceTests
+//  HomeSourceServiceTests.swift
+//  HomeSource
 //
-//  Created by Merrick Sapsford on 21/04/2016.
+//  Created by Gary Butcher on 21/04/2016.
 //  Copyright © 2016 Apadmi. All rights reserved.
 //
 
 import XCTest
-@testable import HomeSource
 
-class HomeSourceTests: XCTestCase {
+class HomeSourceServiceTests: XCTestCase {
+    
+    let service = HomeSourceService()
     
     override func setUp() {
         super.setUp()
@@ -21,16 +22,21 @@ class HomeSourceTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testUserInitalisesAsNull() {
+        XCTAssertNil(service.getUser())
     }
     
-    func testPerformanceExample() {
+    func testGetCampaignsReturnsData() {
+        service.getCampaigns({campaigns, error in
+            XCTAssertNotNil(campaigns)
+        })
+    }
+    
+    /*func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
             // Put the code you want to measure the time of here.
         }
-    }
+    }*/
     
 }

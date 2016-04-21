@@ -9,16 +9,13 @@
 import UIKit
 
 class AuthenticatedNavigationController: UINavigationController {
-   
-    var authenticated: Bool?
     
     // MARK - Init
     
     required init?(coder aDecoder: NSCoder) {
-        self.authenticated = false
         super.init(coder: aDecoder)
         
-        if (self.authenticated == false) {
+        if (HomeSourceService.instance().isLoggedIn() == false) {
             let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
             let signInViewController = storyboard.instantiateViewControllerWithIdentifier("SignInViewController") as! SignInViewController
             let currentViewControllerId = self.viewControllers.first?.restorationIdentifier
