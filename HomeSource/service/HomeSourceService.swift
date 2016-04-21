@@ -111,7 +111,9 @@ public class HomeSourceService: NSObject {
             let title = goalData["title"].string,
             let subtitle = goalData["subtitle"].string,
             let target = goalData["target"].int,
-            let current = goalData["current"].int
+            let current = goalData["current"].int,
+            let typeRawValue = goalData["type"].int,
+            let type = DonationType(rawValue: typeRawValue)
             else {
                 print("Invalid goal json object")
                 return
@@ -122,6 +124,7 @@ public class HomeSourceService: NSObject {
         goal.subtitle = subtitle
         goal.target = target
         goal.current = current
+        goal.donationType = type
         if let singular = goalData["suffix"]["singular"].string,
             let plural = goalData["suffix"]["plural"].string {
             goal.suffix = (singular, plural)

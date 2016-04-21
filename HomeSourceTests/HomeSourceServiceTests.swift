@@ -39,9 +39,10 @@ class HomeSourceServiceTests: XCTestCase {
                         print(goal.getCurrentString() + " - " + String(goal.getPercentageOfGoal() * 100.0) )
                     }
                 }
+                XCTAssertTrue(campaigns.count > 0)
+            } else {
+                XCTFail()
             }
-            
-            XCTAssertNotNil(campaigns)
         })
     }
     

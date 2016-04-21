@@ -13,7 +13,8 @@
                             "suffix": {
                             "singular": "pair",
                             "plural": "pairs"
-                            }
+                            },
+                            "type" : 2
                             }]
                   }, {
                   "title": "Campign Title 2",
@@ -29,7 +30,8 @@
                             "prefix": {
                             "singular": "£",
                             "plural": "£"
-                            }
+                            },
+                            "type" : 0
                             }]
                   }, {
                   "title": "Campign Title 3",
@@ -45,7 +47,8 @@
                             "suffix": {
                             "singular": "hour",
                             "plural": "hours"
-                            }
+                            },
+                            "type" : 1
                             }]
                   }]
 }

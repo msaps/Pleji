@@ -20,6 +20,7 @@ class Goal: NSObject {
     var target: Int
     var current: Int
     var subtitle: String
+    var donationType : DonationType
     
     var suffix: (singular : String, plural : String)?
     var prefix: (singular : String, plural : String)?
@@ -30,6 +31,7 @@ class Goal: NSObject {
         self.target = 100
         self.current = 28
         self.subtitle = "Warm weather sleeping bags"
+        self.donationType = .Money
     }
     
     func getTargetString() -> String {
