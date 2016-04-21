@@ -15,7 +15,7 @@ class Goal: NSObject {
     //current
     //subtitle
     
-    var icon: UIImage
+    var icon: String?
     var title: String
     var target: Int
     var current: Int
@@ -26,7 +26,7 @@ class Goal: NSObject {
     var prefix: (singular : String, plural : String)?
     
     override init() {
-        self.icon = UIImage(named: "money")!
+        self.icon = nil // not icon
         self.title = "Sleeping bags"
         self.target = 100
         self.current = 28

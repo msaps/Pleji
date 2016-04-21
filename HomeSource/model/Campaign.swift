@@ -16,7 +16,7 @@ class Campaign: NSObject {
     //Logo / charity name
     //Date
     
-    var heroImage: UIImage
+    var image: String?
     var goals: [Goal]
     var campaignDescription: String
     var title: String
@@ -26,7 +26,7 @@ class Campaign: NSObject {
     override init() {
         
         //Set up some dummy data
-        self.heroImage = UIImage(named: "hero_image_header")!
+        self.image = nil
         self.goals = [Goal]()
         self.campaignDescription = "This is a test campaign"
         self.title = "We need people!"

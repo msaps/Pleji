@@ -93,6 +93,7 @@ public class HomeSourceService: NSObject {
             campaign.title = title
             campaign.campaignDescription = description
             campaign.endDate = endDate
+            campaign.image = campaignData["image"].string
             campaigns.append(campaign)
             
             //add goals to out campaign
@@ -125,6 +126,7 @@ public class HomeSourceService: NSObject {
         goal.target = target
         goal.current = current
         goal.donationType = type
+        goal.icon = goalData["image"].string
         if let singular = goalData["suffix"]["singular"].string,
             let plural = goalData["suffix"]["plural"].string {
             goal.suffix = (singular, plural)
