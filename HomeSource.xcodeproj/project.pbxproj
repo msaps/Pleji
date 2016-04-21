@@ -21,6 +21,13 @@
 		5EAD3B921CC8EA0200CD35B5 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B8C1CC8E4C500CD35B5 /* Goal.swift */; };
 		5EAD3B931CC8EA0200CD35B5 /* HomeSourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD3B861CC8E04A00CD35B5 /* HomeSourceService.swift */; };
 		D5E14E2BF5BB30DE4C3ABE9E /* Pods_HomeSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3542C4DD609A585B57E58C3 /* Pods_HomeSource.framework */; };
+		4686D8251CC8E581001EC1A5 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8241CC8E581001EC1A5 /* DiscoverViewController.swift */; };
+		4686D8271CC8E597001EC1A5 /* CampainDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8261CC8E597001EC1A5 /* CampainDetailsViewController.swift */; };
+		4686D8291CC8E619001EC1A5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8281CC8E619001EC1A5 /* SignInViewController.swift */; };
+		4686D82B1CC8E630001EC1A5 /* PledgeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D82A1CC8E630001EC1A5 /* PledgeDetailsViewController.swift */; };
+		4686D82D1CC8E6F6001EC1A5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D82C1CC8E6F6001EC1A5 /* ProfileViewController.swift */; };
+		4686D82F1CC8E715001EC1A5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D82E1CC8E715001EC1A5 /* OnboardingViewController.swift */; };
+		4686D8311CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8301CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +69,13 @@
 		87FB42A28CD924F9A45790BA /* Pods-HomeSource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeSource.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeSource/Pods-HomeSource.debug.xcconfig"; sourceTree = "<group>"; };
 		940694948C0E21C9F195894F /* Pods-HomeSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeSource.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeSource/Pods-HomeSource.release.xcconfig"; sourceTree = "<group>"; };
 		A3542C4DD609A585B57E58C3 /* Pods_HomeSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4686D8241CC8E581001EC1A5 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		4686D8261CC8E597001EC1A5 /* CampainDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampainDetailsViewController.swift; sourceTree = "<group>"; };
+		4686D8281CC8E619001EC1A5 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		4686D82A1CC8E630001EC1A5 /* PledgeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PledgeDetailsViewController.swift; sourceTree = "<group>"; };
+		4686D82C1CC8E6F6001EC1A5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4686D82E1CC8E715001EC1A5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		4686D8301CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +197,13 @@
 			isa = PBXGroup;
 			children = (
 				4686D8201CC8E513001EC1A5 /* Main.storyboard */,
-				4686D8211CC8E513001EC1A5 /* ViewController.swift */,
+				4686D8281CC8E619001EC1A5 /* SignInViewController.swift */,
+				4686D8241CC8E581001EC1A5 /* DiscoverViewController.swift */,
+				4686D8261CC8E597001EC1A5 /* CampainDetailsViewController.swift */,
+				4686D82A1CC8E630001EC1A5 /* PledgeDetailsViewController.swift */,
+				4686D82C1CC8E6F6001EC1A5 /* ProfileViewController.swift */,
+				4686D82E1CC8E715001EC1A5 /* OnboardingViewController.swift */,
+				4686D8301CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -413,8 +433,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4686D8231CC8E513001EC1A5 /* ViewController.swift in Sources */,
+				4686D8251CC8E581001EC1A5 /* DiscoverViewController.swift in Sources */,
+				4686D82B1CC8E630001EC1A5 /* PledgeDetailsViewController.swift in Sources */,
+				4686D82F1CC8E715001EC1A5 /* OnboardingViewController.swift in Sources */,
+				4686D8311CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift in Sources */,
 				4686D7E61CC8DAE7001EC1A5 /* AppDelegate.swift in Sources */,
+				4686D82D1CC8E6F6001EC1A5 /* ProfileViewController.swift in Sources */,
+				4686D8291CC8E619001EC1A5 /* SignInViewController.swift in Sources */,
+				4686D8271CC8E597001EC1A5 /* CampainDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
