@@ -14,10 +14,19 @@ enum CampaignError : ErrorType {
     case DataNotFound
 }
 
-class HomeSourceService: NSObject {
-    
+public class HomeSourceService: NSObject {
     
     private var mUser : User?
+    private static var gInstance : HomeSourceService?
+    
+    ///MARK: Singleton access
+    
+    class func instance() -> HomeSourceService {
+        if gInstance == nil {
+            gInstance = HomeSourceService()
+        }
+        return gInstance!
+    }
     
     ///MARK: User
     
