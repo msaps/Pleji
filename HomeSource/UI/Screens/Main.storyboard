@@ -11,7 +11,7 @@
         <scene sceneID="xno-Ok-r2O">
             <objects>
                 <navigationController id="1pO-nT-0Hw" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zb2-8G-vcB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zb2-8G-vcB" customClass="HomeSourceNavigationBar" customModule="HomeSource" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -27,7 +27,7 @@
         <scene sceneID="VW7-4u-jOD">
             <objects>
                 <navigationController id="j4r-3h-aqD" customClass="AuthenticatedNavigationController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qeZ-9t-8qz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qeZ-9t-8qz" customClass="HomeSourceNavigationBar" customModule="HomeSource" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -58,7 +58,7 @@
             </objects>
             <point key="canvasLocation" x="761" y="-587"/>
         </scene>
-        <!--Discover View Controller-->
+        <!--Discover-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="DiscoverViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="DiscoverViewController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
@@ -225,7 +225,7 @@
                             <constraint firstItem="lNe-ts-b1y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aG8-5z-T9i"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hiE-zD-G3e">
+                    <navigationItem key="navigationItem" title="Discover" id="hiE-zD-G3e">
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="XI0-Lv-i3e">
                             <connections>
                                 <segue destination="j4r-3h-aqD" kind="presentation" id="hFD-zm-RO1"/>
@@ -273,7 +273,7 @@
         <scene sceneID="THd-0B-Qqp">
             <objects>
                 <navigationController id="ZYp-hy-3jI" customClass="AuthenticatedNavigationController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hxJ-6i-NNU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hxJ-6i-NNU" customClass="HomeSourceNavigationBar" customModule="HomeSource" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
