@@ -13,13 +13,13 @@
 		4686D81B1CC8E500001EC1A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4686D8191CC8E500001EC1A5 /* Assets.xcassets */; };
 		4686D81C1CC8E500001EC1A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4686D81A1CC8E500001EC1A5 /* LaunchScreen.storyboard */; };
 		4686D8221CC8E513001EC1A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4686D8201CC8E513001EC1A5 /* Main.storyboard */; };
-		4686D8251CC8E581001EC1A5 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8241CC8E581001EC1A5 /* DiscoverViewController.swift */; };
 		4686D8271CC8E597001EC1A5 /* CampainDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8261CC8E597001EC1A5 /* CampainDetailsViewController.swift */; };
 		4686D8291CC8E619001EC1A5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8281CC8E619001EC1A5 /* SignInViewController.swift */; };
 		4686D82B1CC8E630001EC1A5 /* PledgeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D82A1CC8E630001EC1A5 /* PledgeDetailsViewController.swift */; };
 		4686D82D1CC8E6F6001EC1A5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D82C1CC8E6F6001EC1A5 /* ProfileViewController.swift */; };
 		4686D82F1CC8E715001EC1A5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D82E1CC8E715001EC1A5 /* OnboardingViewController.swift */; };
 		4686D8311CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8301CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift */; };
+		4686D83C1CC91B78001EC1A5 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D83B1CC91B78001EC1A5 /* DiscoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,13 +52,13 @@
 		4686D8191CC8E500001EC1A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4686D81A1CC8E500001EC1A5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4686D8201CC8E513001EC1A5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		4686D8241CC8E581001EC1A5 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		4686D8261CC8E597001EC1A5 /* CampainDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampainDetailsViewController.swift; sourceTree = "<group>"; };
 		4686D8281CC8E619001EC1A5 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4686D82A1CC8E630001EC1A5 /* PledgeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PledgeDetailsViewController.swift; sourceTree = "<group>"; };
 		4686D82C1CC8E6F6001EC1A5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4686D82E1CC8E715001EC1A5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		4686D8301CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedNavigationController.swift; sourceTree = "<group>"; };
+		4686D83B1CC91B78001EC1A5 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +149,6 @@
 			children = (
 				4686D81E1CC8E513001EC1A5 /* Components */,
 				4686D81F1CC8E513001EC1A5 /* Screens */,
-				4686D8321CC90076001EC1A5 /* Utilities */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -166,7 +165,7 @@
 			children = (
 				4686D8201CC8E513001EC1A5 /* Main.storyboard */,
 				4686D8281CC8E619001EC1A5 /* SignInViewController.swift */,
-				4686D8241CC8E581001EC1A5 /* DiscoverViewController.swift */,
+				4686D83B1CC91B78001EC1A5 /* DiscoverViewController.swift */,
 				4686D8261CC8E597001EC1A5 /* CampainDetailsViewController.swift */,
 				4686D82A1CC8E630001EC1A5 /* PledgeDetailsViewController.swift */,
 				4686D82C1CC8E6F6001EC1A5 /* ProfileViewController.swift */,
@@ -174,13 +173,6 @@
 				4686D8301CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		4686D8321CC90076001EC1A5 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,12 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4686D8251CC8E581001EC1A5 /* DiscoverViewController.swift in Sources */,
 				4686D82B1CC8E630001EC1A5 /* PledgeDetailsViewController.swift in Sources */,
 				4686D82F1CC8E715001EC1A5 /* OnboardingViewController.swift in Sources */,
 				4686D8311CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift in Sources */,
 				4686D7E61CC8DAE7001EC1A5 /* AppDelegate.swift in Sources */,
 				4686D82D1CC8E6F6001EC1A5 /* ProfileViewController.swift in Sources */,
+				4686D83C1CC91B78001EC1A5 /* DiscoverViewController.swift in Sources */,
 				4686D8291CC8E619001EC1A5 /* SignInViewController.swift in Sources */,
 				4686D8271CC8E597001EC1A5 /* CampainDetailsViewController.swift in Sources */,
 			);
