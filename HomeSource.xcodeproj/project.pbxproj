@@ -149,6 +149,7 @@
 			children = (
 				4686D81E1CC8E513001EC1A5 /* Components */,
 				4686D81F1CC8E513001EC1A5 /* Screens */,
+				4686D8321CC90076001EC1A5 /* Utilities */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -173,6 +174,13 @@
 				4686D8301CC8EB96001EC1A5 /* AuthenticatedNavigationController.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		4686D8321CC90076001EC1A5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
