@@ -28,6 +28,16 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first
+        if let index = indexPath?.row {
+            let campaign = self.campaigns![index]
+            
+            let detailsViewController = segue.destinationViewController as! CampainDetailsViewController
+            detailsViewController.campaign = campaign
+        }
+    }
+    
     // MARK - UICollectionViewDataSource
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
