@@ -90,7 +90,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vff-mf-1r8" userLabel="Background View">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rIs-cn-bSU">
+                                                        <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rIs-cn-bSU">
                                                             <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
                                                         </imageView>
                                                         <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-qk-BfZ" userLabel="Blur Container View">
@@ -159,12 +159,36 @@
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8k-kt-K5s" userLabel="Details Container">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8k-kt-K5s" customClass="DiscoverTimeRemainingView" customModule="HomeSource" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="74.5" width="460" height="22"/>
-                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="C6a-wf-s1a">
+                                                                    <rect key="frame" x="0.0" y="1" width="20" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="C6a-wf-s1a" secondAttribute="height" multiplier="1:1" id="BiA-D9-g6t"/>
+                                                                        <constraint firstAttribute="width" constant="20" id="pJa-Po-gZ0"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 days left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOJ-bE-FyF">
+                                                                    <rect key="frame" x="26" y="1.5" width="434" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22" id="2m1-92-FhB"/>
+                                                                <constraint firstItem="LOJ-bE-FyF" firstAttribute="leading" secondItem="C6a-wf-s1a" secondAttribute="trailing" constant="6" id="PYh-n8-jjZ"/>
+                                                                <constraint firstItem="C6a-wf-s1a" firstAttribute="leading" secondItem="e8k-kt-K5s" secondAttribute="leading" id="WYe-hg-Qkx"/>
+                                                                <constraint firstAttribute="trailing" secondItem="LOJ-bE-FyF" secondAttribute="trailing" id="eHk-YL-BtQ"/>
+                                                                <constraint firstItem="C6a-wf-s1a" firstAttribute="centerY" secondItem="e8k-kt-K5s" secondAttribute="centerY" id="kkj-Xm-9Dv"/>
+                                                                <constraint firstItem="LOJ-bE-FyF" firstAttribute="centerY" secondItem="e8k-kt-K5s" secondAttribute="centerY" id="lEe-T3-mBY"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="C6a-wf-s1a" id="TQ4-GK-P2J"/>
+                                                                <outlet property="titleLabel" destination="LOJ-bE-FyF" id="3hl-gr-vk1"/>
+                                                            </connections>
                                                         </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -205,6 +229,7 @@
                                             <outlet property="detailsLabel" destination="Yqe-bh-C4W" id="5u1-hA-Il4"/>
                                             <outlet property="imageView" destination="C5t-85-xVy" id="7Vg-QS-Xh7"/>
                                             <outlet property="progressView" destination="vYL-hI-ZUZ" id="5Ci-lh-GZf"/>
+                                            <outlet property="timeRemainingView" destination="e8k-kt-K5s" id="vps-vr-acH"/>
                                             <outlet property="titleLabel" destination="e38-8X-5JZ" id="ssC-bF-gCD"/>
                                             <segue destination="2bB-UT-GX6" kind="show" id="ZNC-Jl-My5"/>
                                         </connections>
@@ -439,4 +464,7 @@
             <point key="canvasLocation" x="1318" y="524"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clock" width="20" height="20"/>
+    </resources>
 </document>

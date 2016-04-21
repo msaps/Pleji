@@ -8,6 +8,7 @@
 
 import UIKit
 import GradientCircularProgress
+import DateTools
 
 class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
@@ -56,6 +57,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
         cell.detailsLabel?.text = campaign.campaignDescription
         cell.imageView?.image = UIImage(named: "logo")
         cell.backgroundImageView?.image = UIImage(named: "hero_image_header")
+        cell.timeRemainingView?.date = campaign.endDate
         
         let progress = GradientCircularProgress()
         let progressView = progress.showAtRatio(frame: cell.progressView!.bounds, display: true, style: MyStyle())
@@ -86,8 +88,41 @@ class DiscoverCollectionViewCell: UICollectionViewCell {
     @IBOutlet var titleLabel: UILabel?
     @IBOutlet var detailsLabel: UILabel?
     @IBOutlet var backgroundImageView: UIImageView?
+    @IBOutlet var timeRemainingView: DiscoverTimeRemainingView?
     
     @IBOutlet var progressView: UIView?
+}
+
+class DiscoverTimeRemainingView: UIView {
+    
+    @IBOutlet var titleLabel: UILabel?
+    @IBOutlet var imageView: UIImageView?
+    
+    var date: NSDate? {
+        willSet {
+            let timePeriod = DTTimePeriod(startDate: NSDate(), endDate: newValue)
+            
+            var timeComponent = timePeriod.durationInDays()
+            var timeString: String
+            if timeComponent == 0 {
+                timeComponent = timePeriod.durationInHours()
+                if timeComponent == 0 {
+                    timeComponent = timePeriod.durationInMinutes()
+                    if timeComponent == 0 {
+                        timeString = "Finishing now..."
+                    } else {
+                        timeString = String(format: "%i minutes left", NSInteger(timeComponent))
+                    }
+                } else {
+                    timeString = String(format: "%i hours left", NSInteger(timeComponent))
+                }
+            } else {
+                timeString = String(format: "%i days left", NSInteger(timeComponent))
+            }
+            
+            self.titleLabel?.text = timeString
+        }
+    }
 }
 
 public struct MyStyle : StyleProperty {
