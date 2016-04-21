@@ -6,6 +6,7 @@ use_frameworks!
 target 'HomeSource' do
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
     pod 'DateTools'
+    pod 'GradientCircularProgress', :git => 'https://github.com/keygx/GradientCircularProgress' 
 end
 
 target 'HomeSourceTests' do

@@ -3,7 +3,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+<<<<<<< HEAD
+=======
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+>>>>>>> develop
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -571,8 +574,11 @@
         </scene>
     </scenes>
     <resources>
+<<<<<<< HEAD
         <image name="ic_user" width="200" height="200"/>
         <image name="login_background" width="621" height="1104"/>
+=======
         <image name="clock" width="20" height="20"/>
+>>>>>>> develop
     </resources>
 </document>

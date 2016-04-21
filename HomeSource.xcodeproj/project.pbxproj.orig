@@ -197,8 +197,11 @@
 		4686D81E1CC8E513001EC1A5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				5E45F9621CC9392C008F186D /* ColorButton.swift */,
+=======
 				4686D83D1CC933CC001EC1A5 /* HomeSourceComponents.swift */,
+>>>>>>> develop
 			);
 			path = Components;
 			sourceTree = "<group>";
