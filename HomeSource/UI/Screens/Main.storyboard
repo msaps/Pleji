@@ -576,16 +576,16 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qat-HP-0SP" userLabel="Text Container View">
-                                                            <rect key="frame" x="202.5" y="91.5" width="195.5" height="58"/>
+                                                            <rect key="frame" x="16" y="91.5" width="568" height="58"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaign Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agC-M6-YeL">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="195.5" height="36"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaign Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="agC-M6-YeL">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="568" height="36"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaign Organiser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR1-lE-9is">
-                                                                    <rect key="frame" x="0.0" y="40" width="195.5" height="18"/>
+                                                                    <rect key="frame" x="0.0" y="40" width="568" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -608,11 +608,12 @@
                                                         <constraint firstAttribute="height" constant="240" id="1Xa-kv-pvk"/>
                                                         <constraint firstAttribute="trailing" secondItem="vtl-rC-R7f" secondAttribute="trailing" id="6NK-ka-rKk"/>
                                                         <constraint firstItem="qat-HP-0SP" firstAttribute="centerY" secondItem="Q1a-Me-7SR" secondAttribute="centerY" id="BDm-Xz-8tI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qat-HP-0SP" secondAttribute="trailing" constant="16" id="GyC-a8-rQs"/>
                                                         <constraint firstAttribute="bottom" secondItem="vtl-rC-R7f" secondAttribute="bottom" id="LUz-ns-lEi"/>
+                                                        <constraint firstItem="qat-HP-0SP" firstAttribute="leading" secondItem="Q1a-Me-7SR" secondAttribute="leading" constant="16" id="PaO-js-MAi"/>
                                                         <constraint firstItem="MFY-hz-0mw" firstAttribute="leading" secondItem="Q1a-Me-7SR" secondAttribute="leading" id="TfZ-6U-8hc"/>
                                                         <constraint firstItem="vtl-rC-R7f" firstAttribute="top" secondItem="Q1a-Me-7SR" secondAttribute="top" id="e9H-tS-uLA"/>
                                                         <constraint firstAttribute="trailing" secondItem="MFY-hz-0mw" secondAttribute="trailing" id="eeR-FA-J0t"/>
-                                                        <constraint firstItem="qat-HP-0SP" firstAttribute="centerX" secondItem="Q1a-Me-7SR" secondAttribute="centerX" id="ew6-fO-Dbl"/>
                                                         <constraint firstAttribute="bottom" secondItem="MFY-hz-0mw" secondAttribute="bottom" id="gnO-Qt-zcZ"/>
                                                         <constraint firstItem="MFY-hz-0mw" firstAttribute="top" secondItem="Q1a-Me-7SR" secondAttribute="top" id="rGS-5e-dZ6"/>
                                                         <constraint firstItem="vtl-rC-R7f" firstAttribute="leading" secondItem="Q1a-Me-7SR" secondAttribute="leading" id="v3V-TI-0AJ"/>
