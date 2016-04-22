@@ -90,16 +90,38 @@ class PledgeDetailsViewController: UIViewController {
         
         if goal?.donationType == .Money {
             //Need to show the payment screen first
-            self.performSegueWithIdentifier("presentPaymentScreen", sender: nil)
+            //self.performSegueWithIdentifier("presentPaymentScreen", sender: nil)
+            
+            let alert = UIAlertController(title: "Payment",
+                                          message: nil,
+                                          preferredStyle: .ActionSheet)
+            alert.addAction(UIAlertAction(title: "Pay", style: .Default, handler: { action in
+                self.fakePayment()
+            }))
+            alert.addAction(UIAlertAction(title: "Paypal", style: .Default, handler: { action in
+                self.fakePayment()
+            }))
+            alert.addAction(UIAlertAction(title: "Card", style: .Default, handler: { action in
+                self.fakePayment()
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
+                alert.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
             return
         }
         
+        showThanks()
+    }
+    
+    func showThanks() {
         //update the campiagn object
         goal?.current += self.value
         
         let alert = UIAlertController(title: "Thank You! Share the love?",
-                          message: "Every donation goes a long way in helping your city.",
-                          preferredStyle: .Alert)
+                                      message: "Every donation goes a long way in helping your city.",
+                                      preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Share", style: .Default, handler: { action in
             self.shareDonation()
         }))
@@ -107,6 +129,11 @@ class PledgeDetailsViewController: UIViewController {
             self.dismissViewControllerAnimated(true, completion: nil)
         }))
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func fakePayment() {
+        
+        showThanks()
     }
     
     func shareDonation() {

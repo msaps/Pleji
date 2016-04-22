@@ -632,7 +632,7 @@
             </objects>
             <point key="canvasLocation" x="2663" y="-587"/>
         </scene>
-        <!--Payment View Controller-->
+        <!--Payment-->
         <scene sceneID="nUS-Hp-5AJ">
             <objects>
                 <viewController storyboardIdentifier="PaymentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QF4-S3-wwX" customClass="PaymentViewController" customModule="HomeSource" customModuleProvider="target" sceneMemberID="viewController">
@@ -645,24 +645,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8S9-b7-4b1">
-                                <rect key="frame" x="265.5" y="255" width="69" height="90"/>
+                                <rect key="frame" x="277" y="255" width="46" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJL-7M-ir4">
-                                        <rect key="frame" x="0.0" y="0.0" width="69" height="30"/>
-                                        <state key="normal" title="Apple Pay"/>
+                                        <rect key="frame" x="3.5" y="0.0" width="39" height="30"/>
+                                        <state key="normal" title="Pay"/>
                                         <connections>
                                             <action selector="applePayButtonPressed:" destination="QF4-S3-wwX" eventType="touchUpInside" id="v2B-u5-D17"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmc-L8-dBf">
-                                        <rect key="frame" x="11.5" y="30" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="30" width="46" height="30"/>
                                         <state key="normal" title="Paypal"/>
                                         <connections>
                                             <action selector="paypalButtonPressed:" destination="QF4-S3-wwX" eventType="touchUpInside" id="Ql6-91-sSF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRN-mo-12o">
-                                        <rect key="frame" x="18" y="60" width="33" height="30"/>
+                                        <rect key="frame" x="6.5" y="60" width="33" height="30"/>
                                         <state key="normal" title="Card"/>
                                         <connections>
                                             <action selector="cardButtonPressed:" destination="QF4-S3-wwX" eventType="touchUpInside" id="QzJ-FD-zw5"/>
@@ -670,13 +670,30 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£ 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXX-5q-fL6">
+                                <rect key="frame" x="269" y="145" width="62" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are pledging:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nd3-iT-IIT">
+                                <rect key="frame" x="234" y="84" width="133" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZXX-5q-fL6" firstAttribute="top" secondItem="Nd3-iT-IIT" secondAttribute="bottom" constant="40" id="9ee-kx-hfD"/>
                             <constraint firstItem="8S9-b7-4b1" firstAttribute="centerY" secondItem="emq-Pg-u3v" secondAttribute="centerY" id="C34-Wo-V8v"/>
+                            <constraint firstItem="Nd3-iT-IIT" firstAttribute="centerX" secondItem="emq-Pg-u3v" secondAttribute="centerX" id="UUQ-KO-7lT"/>
+                            <constraint firstItem="ZXX-5q-fL6" firstAttribute="centerX" secondItem="emq-Pg-u3v" secondAttribute="centerX" id="gHi-2D-gnP"/>
+                            <constraint firstItem="Nd3-iT-IIT" firstAttribute="top" secondItem="OU5-tc-Zvz" secondAttribute="bottom" constant="20" id="mSi-UH-m8Q"/>
                             <constraint firstItem="8S9-b7-4b1" firstAttribute="centerX" secondItem="emq-Pg-u3v" secondAttribute="centerX" id="uud-pl-KUQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Payment" id="CQs-SY-pLe"/>
                     <connections>
                         <outlet property="applePayButton" destination="lJL-7M-ir4" id="mWC-af-A63"/>
                         <outlet property="cardButton" destination="dRN-mo-12o" id="244-HG-ZUj"/>
