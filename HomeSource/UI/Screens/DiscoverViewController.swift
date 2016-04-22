@@ -32,6 +32,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.collectionView?.reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
