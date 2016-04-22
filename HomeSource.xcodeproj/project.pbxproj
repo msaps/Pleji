@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1577D8A61CCA169C0038DB27 /* UIColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1577D8A51CCA169C0038DB27 /* UIColorUtils.swift */; };
+		1577D8A81CCA303D0038DB27 /* Splash2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1577D8A71CCA303D0038DB27 /* Splash2x.png */; };
 		4686D7E61CC8DAE7001EC1A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D7E51CC8DAE7001EC1A5 /* AppDelegate.swift */; };
 		4686D8061CC8DAE8001EC1A5 /* HomeSourceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686D8051CC8DAE8001EC1A5 /* HomeSourceUITests.swift */; };
 		4686D81B1CC8E500001EC1A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4686D8191CC8E500001EC1A5 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1577D8A51CCA169C0038DB27 /* UIColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorUtils.swift; path = HomeSource/Util/UIColorUtils.swift; sourceTree = SOURCE_ROOT; };
+		1577D8A71CCA303D0038DB27 /* Splash2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Splash2x.png; path = ../../../../../Dropbox/BusinessRocksHackathon/Design/Splash2x.png; sourceTree = "<group>"; };
 		4686D7E21CC8DAE7001EC1A5 /* HomeSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4686D7E51CC8DAE7001EC1A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4686D7F61CC8DAE8001EC1A5 /* HomeSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +231,7 @@
 		5E45F9541CC8F2EA008F186D /* testData */ = {
 			isa = PBXGroup;
 			children = (
+				1577D8A71CCA303D0038DB27 /* Splash2x.png */,
 				5E45F9551CC8F2F5008F186D /* campaigns.json */,
 			);
 			path = testData;
@@ -255,6 +260,7 @@
 		5EAD3B851CC8E01200CD35B5 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				1577D8A51CCA169C0038DB27 /* UIColorUtils.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 				4686D8221CC8E513001EC1A5 /* Main.storyboard in Resources */,
 				5E45F9561CC8F2F5008F186D /* campaigns.json in Resources */,
 				4686D81C1CC8E500001EC1A5 /* LaunchScreen.storyboard in Resources */,
+				1577D8A81CCA303D0038DB27 /* Splash2x.png in Resources */,
 				4686D81B1CC8E500001EC1A5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +474,7 @@
 				5EB83DA81CC968D800A9C569 /* UserDonation.swift in Sources */,
 				5E45F95C1CC90101008F186D /* User.swift in Sources */,
 				4686D8271CC8E597001EC1A5 /* CampaignDetailsViewController.swift in Sources */,
+				1577D8A61CCA169C0038DB27 /* UIColorUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
