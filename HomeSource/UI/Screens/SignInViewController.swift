@@ -24,20 +24,22 @@ class SignInViewController: UIViewController {
         
         self.navigationController?.navigationBarHidden = true
         
-        let titleString = "Manchester!\nYour comminuity\nneeds you."
-        let range = (titleString as NSString).rangeOfString(" you.")
+        let titleString = "Find incredible\ncauses you love."
+        let range = (titleString as NSString).rangeOfString("love")
+        //let titleString = "Manchester!\nYour comminuity\nneeds you."
+
         
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 0
-        style.maximumLineHeight = 26
+        style.maximumLineHeight = 30
         
         let title = NSMutableAttributedString(string: titleString)
-        title.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: range)
+        title.addAttribute(NSForegroundColorAttributeName, value: UIColor.plejiGreen(), range: range)
         
         title.addAttribute(NSParagraphStyleAttributeName, value:style, range:NSMakeRange(0, titleString.characters.count))
         
         self.titleLabel.attributedText = title
-        self.messageLabel.text = "Sign up and help out those that make\nour city the fantastic place it is."
+        self.messageLabel.text = "We help you to find local campaigns\nand worthwhile causes you will love."
         self.activityIndicator.stopAnimating()
     }
     
