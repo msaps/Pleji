@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1pO-nT-0Hw">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -337,7 +336,7 @@
                                             <outlet property="progressView" destination="vYL-hI-ZUZ" id="5Ci-lh-GZf"/>
                                             <outlet property="timeRemainingView" destination="e8k-kt-K5s" id="vps-vr-acH"/>
                                             <outlet property="titleLabel" destination="e38-8X-5JZ" id="ssC-bF-gCD"/>
-                                            <segue destination="2bB-UT-GX6" kind="show" id="ZNC-Jl-My5"/>
+                                            <segue destination="2bB-UT-GX6" kind="show" identifier="campaignDetailsPush" id="ZNC-Jl-My5"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -658,7 +657,7 @@
                                             <outlet property="titleLabel" destination="agC-M6-YeL" id="xHv-YX-sdo"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="campaignGoalCell" id="M2v-WS-8tC" userLabel="campaignGoalCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="campaignGoalCell" id="M2v-WS-8tC" userLabel="campaignGoalCell" customClass="CampaignGoalCell" customModule="HomeSource" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="300" width="600" height="335"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
