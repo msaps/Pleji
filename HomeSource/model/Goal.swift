@@ -46,13 +46,13 @@ class Goal: NSObject {
         var currentString = "";
         
         if let prefix = self.prefix {
-            currentString += (self.current==1 ? prefix.singular : prefix.plural) + " "
+            currentString += (value==1 ? prefix.singular : prefix.plural) + " "
         }
         
         currentString += String(value)
         
         if let suffix = self.suffix {
-            currentString += " " + (self.current==1 ? suffix.singular : suffix.plural)
+            currentString += " " + (value==1 ? suffix.singular : suffix.plural)
         }
         
         return currentString

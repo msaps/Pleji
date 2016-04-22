@@ -83,7 +83,11 @@ class PledgeDetailsViewController: UIViewController {
         
         donationValueLabel.text = goal.formatString(value)
         let remaining = goal.target - goal.current - self.value
-        targetLabel.text = "\(remaining) still needed"
+        if remaining == 0 {
+            targetLabel.text = "Thank you so much!"
+        } else {
+            targetLabel.text = "\(goal.formatString(remaining)) still needed"
+        }
     }
     
     @IBAction func pledgeButtonPressed(sender: AnyObject) {
