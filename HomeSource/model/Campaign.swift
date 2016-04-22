@@ -36,4 +36,13 @@ class Campaign: NSObject {
         self.endDate = NSDate(timeIntervalSinceNow: 60 * 60 * 24 * 7)
     }
     
+    func getOverallProgress() -> Float {
+        var percent : Float = 0.0
+        for goal in goals {
+            percent += goal.getPercentageOfGoal()
+        }
+        
+        return percent / Float(goals.count)
+    }
+    
 }

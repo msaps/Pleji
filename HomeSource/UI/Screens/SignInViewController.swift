@@ -43,6 +43,12 @@ class SignInViewController: UIViewController {
         self.activityIndicator.stopAnimating()
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     // MARK - Interaction
     
     @IBAction func signedInPressed(sender: AnyObject) {

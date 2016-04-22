@@ -30,12 +30,14 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first
-        if let index = indexPath?.row {
-            let campaign = self.campaigns![index]
-            
-            let detailsViewController = segue.destinationViewController as! CampaignDetailsViewController
-            detailsViewController.campaign = campaign
+        if segue.identifier == "campaignDetailsPush" {
+            let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first
+            if let index = indexPath?.row {
+                let campaign = self.campaigns![index]
+                
+                let detailsViewController = segue.destinationViewController as! CampaignDetailsViewController
+                detailsViewController.campaign = campaign
+            }
         }
     }
     
@@ -59,10 +61,12 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
         cell.backgroundImageView?.image = UIImage(named: "hero_image_header")
         cell.timeRemainingView?.date = campaign.endDate
         
+        let overallProgress = CGFloat(campaign.getOverallProgress() ?? 0)
+        
         let progress = GradientCircularProgress()
         let progressView = progress.showAtRatio(frame: cell.progressView!.bounds, display: true, style: HomeSourceCircularProgressStyle())
         progressView?.backgroundColor = UIColor.clearColor()
-        progress.updateRatio(0.4)
+        progress.updateRatio(overallProgress)
         cell.progressView?.addSubview(progressView!)
 
         return cell
