@@ -890,14 +890,22 @@
                                         </view>
                                         <blurEffect style="dark"/>
                                     </visualEffectView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-OS-JJ2">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
+                                        <color key="backgroundColor" red="0.29803921568627451" green="0.83529411764705885" blue="0.4392156862745098" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="ZlR-3D-nog" firstAttribute="top" secondItem="xwK-bB-hEl" secondAttribute="top" id="0HC-rE-p4M"/>
                                     <constraint firstAttribute="height" constant="20" id="DO2-9b-9VC"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Ki-OS-JJ2" secondAttribute="bottom" id="GQh-gu-RIJ"/>
+                                    <constraint firstItem="8Ki-OS-JJ2" firstAttribute="top" secondItem="xwK-bB-hEl" secondAttribute="top" id="YNr-pP-sMS"/>
+                                    <constraint firstItem="8Ki-OS-JJ2" firstAttribute="leading" secondItem="xwK-bB-hEl" secondAttribute="leading" id="ZOM-nE-18N"/>
                                     <constraint firstAttribute="bottom" secondItem="ZlR-3D-nog" secondAttribute="bottom" id="Zis-aW-5gU"/>
                                     <constraint firstItem="ZlR-3D-nog" firstAttribute="leading" secondItem="xwK-bB-hEl" secondAttribute="leading" id="dzs-Yv-tIy"/>
                                     <constraint firstAttribute="trailing" secondItem="ZlR-3D-nog" secondAttribute="trailing" id="g2y-bl-lX5"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Ki-OS-JJ2" secondAttribute="trailing" id="uDT-q2-f7P"/>
                                 </constraints>
                             </view>
                         </subviews>
