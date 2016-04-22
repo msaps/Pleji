@@ -169,12 +169,12 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
 
 class CampaignHeaderCell: UICollectionViewCell {
     
-    @IBOutlet var backgroundImageView: UIImageView?
-    @IBOutlet var titleLabel: UILabel?
-    @IBOutlet var subtitleLabel: UILabel?
+    @IBOutlet weak var backgroundImageView: UIImageView?
+    @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var subtitleLabel: UILabel?
     
-    @IBOutlet var progressContainerView: UIView?
-    @IBOutlet var progressLabel: UILabel?
+    @IBOutlet weak var progressContainerView: UIView?
+    @IBOutlet weak var progressLabel: UILabel?
 
 }
 
@@ -182,16 +182,16 @@ class CampaignGoalCell: UICollectionViewCell {
     
     // MARK - Properties
     
-    @IBOutlet var titleLabel: UILabel?
+    @IBOutlet weak var titleLabel: UILabel?
     
-    @IBOutlet var goalLabel: UILabel?
+    @IBOutlet weak var goalLabel: UILabel?
     
-    @IBOutlet var typeLabel: UILabel?
+    @IBOutlet weak var typeLabel: UILabel?
     
-    @IBOutlet var progressLabel: UILabel?
-    @IBOutlet var progressContainer: UIView?
+    @IBOutlet weak var progressLabel: UILabel?
+    @IBOutlet weak var progressContainer: UIView?
     
-    @IBOutlet var pledgeButton: UIButton?
+    @IBOutlet weak var pledgeButton: UIButton?
     
     var viewController: UIViewController?
     var goal: Goal?
