@@ -56,9 +56,15 @@ public class HomeSourceService: NSObject {
     
     func logout(completion: AuthCompletionBlock){
         
-        //TODO: Async logout call
-        mUser = nil;
-        completion(success: true, error: nil);
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            NSThread.sleepForTimeInterval(2)
+            dispatch_async(dispatch_get_main_queue()) {
+                
+                self.mUser = nil;
+                completion(success: true, error: nil);
+            }
+        }
     }
     
     ///MARK: Campaigns
