@@ -1,14 +1,90 @@
 {
     "campaigns": [{
-                  "title": "Campign Title",
-                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                  
+                  "title": "Barnabus - Christmas Appeal",
+                  "description": "We know you want to make a difference so we've come up with some suggestions of how you can help bring Joy at this special time of year.",
                   "image": "http://placekitten.com/780/460",
                   "endDate": "2016-04-22T11:43:38+00:00",
                   "organiser": "The best charity",
                   "goals": [{
+                            "title": "Gloves",
+                            "subtitle": "",
+                            "target": 50,
+                            "current": 46,
+                            "suffix": {
+                            "singular": "pair",
+                            "plural": "pairs"
+                            },
+                            "type" : 2
+                            },
+                            {
+                            "title": "Scarfs",
+                            "subtitle": "",
+                            "target": 50,
+                            "current": 10,
+                            "suffix": {
+                            "singular": "scarf",
+                            "plural": "scarfs"
+                            },
+                            "type" : 2
+                            },
+                            {
+                            "title": "Waterproof Jackets",
+                            "subtitle": "",
+                            "target": 70,
+                            "current": 70,
+                            "suffix": {
+                            "singular": "jacket",
+                            "plural": "jackets"
+                            },
+                            "type" : 2
+                            },
+                            {
+                            "title": "Warm Coats",
+                            "subtitle": "",
+                            "target": 60,
+                            "current": 33,
+                            "suffix": {
+                            "singular": "coat",
+                            "plural": "coats"
+                            },
+                            "type" : 2
+                            },
+                            {
+                            "title": "Sleeping Bags",
+                            "subtitle": "",
+                            "target": 100,
+                            "current": 100,
+                            "suffix": {
+                            "singular": "bag",
+                            "plural": "bags"
+                            },
+                            "type" : 2
+                            },
+                            {
+                            "title": "Blankets",
+                            "subtitle": "",
+                            "target": 100,
+                            "current": 46,
+                            "suffix": {
+                            "singular": "blanket",
+                            "plural": "blankets"
+                            },
+                            "type" : 2
+                            },
+                            {
+                            "title": "Shoes",
+                            "subtitle": "",
+                            "target": 100,
+                            "current": 46,
+                            "suffix": {
+                            "singular": "pair",
+                            "plural": "pairs"
+                            },
+                            "type" : 2
+                            },
+                            {
                             "title": "Socks",
-                            "subtitle": "We need socks for winter",
+                            "subtitle": "",
                             "target": 100,
                             "current": 46,
                             "suffix": {
