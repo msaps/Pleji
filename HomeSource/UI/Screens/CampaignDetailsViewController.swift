@@ -30,6 +30,12 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    // MARK - Interaction
+    
+    @IBAction func backButtonPressed(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
     // MARK - UICollectionViewDataSource
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
