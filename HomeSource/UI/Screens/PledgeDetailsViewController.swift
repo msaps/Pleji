@@ -127,8 +127,8 @@ class PledgeDetailsViewController: UIViewController {
         goal?.current += self.value
         
         var msg = "Every donation goes a long way in helping your city."
-        if type == .Money {
-            msg = "You will recieve an email with your reminder and QR code. Remmeber to bring this along with you.\n\nEvery donation goes a long way in helping your city."
+        if type != .Money {
+            msg = "You will recieve an email with your reminder and QR code. Rememeber to bring this along with you.\n\nEvery donation goes a long way in helping your city."
         }
         
         let alert = UIAlertController(title: "Thank You!",
