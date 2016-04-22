@@ -47,7 +47,7 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
         case 0:
             return 1
         case 1:
-            return 2
+            return (self.campaign?.goals.count ?? 0)
         default:
             return 0
         }
@@ -75,6 +75,10 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
         
         default:
             let goalCell = collectionView.dequeueReusableCellWithReuseIdentifier("campaignGoalCell", forIndexPath: indexPath) as! CampaignGoalCell
+            let goal = self.campaign?.goals[indexPath.row]
+            
+            goalCell.viewController = self
+            goalCell.goal = goal
             
             let progress = GradientCircularProgress()
             let progressView = progress.showAtRatio(frame: goalCell.progressContainer!.bounds, display: true, style: CampaignDetailsProgressCellCircularProgressStyle())
@@ -132,6 +136,8 @@ class CampaignHeaderCell: UICollectionViewCell {
 
 class CampaignGoalCell: UICollectionViewCell {
     
+    // MARK - Properties
+    
     @IBOutlet var goalLabel: UILabel?
     
     @IBOutlet var typeImage: UIImage?
@@ -141,6 +147,27 @@ class CampaignGoalCell: UICollectionViewCell {
     @IBOutlet var progressContainer: UIView?
     
     @IBOutlet var pledgeButton: UIButton?
+    
+    var viewController: UIViewController?
+    var goal: Goal?
+    
+    // MARK - Lifecycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.pledgeButton?.addTarget(self, action: #selector(pledgeButtonPressed), forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
+    @objc func pledgeButtonPressed(sender: AnyObject) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let pledgeViewController = storyboard.instantiateViewControllerWithIdentifier("PledgeNavigationController")
+        
+        if self.viewController != nil {
+            self.viewController!.presentViewController(pledgeViewController, animated: true, completion: nil)
+        }
+    }
 }
 
 public struct CampaignDetailsCircularProgressStyle : StyleProperty {

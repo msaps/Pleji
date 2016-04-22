@@ -10,4 +10,7 @@ import UIKit
 
 class PledgeDetailsViewController: UIViewController {
     
+    // MARK - Properties
+    var goal: Goal?
+    
 }
