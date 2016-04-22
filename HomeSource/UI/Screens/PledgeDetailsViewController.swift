@@ -13,6 +13,7 @@ class PledgeDetailsViewController: UIViewController {
     @IBOutlet weak var campaignImageView: UIImageView!
     @IBOutlet weak var campaignTitleLabel: UILabel!
     @IBOutlet weak var campaignOrganiserLabel: UILabel!
+    @IBOutlet weak var goalTitleLabel: UILabel!
     @IBOutlet weak var donationValueLabel: UILabel!
     @IBOutlet weak var donationSlider: UISlider!
     @IBOutlet weak var targetLabel: UILabel!
@@ -81,9 +82,15 @@ class PledgeDetailsViewController: UIViewController {
             return
         }
         
+        goalTitleLabel.text = goal.title
+        
         donationValueLabel.text = goal.formatString(value)
         let remaining = goal.target - goal.current - self.value
-        targetLabel.text = "\(remaining) still needed"
+        if remaining == 0 {
+            targetLabel.text = "Thank you so much!"
+        } else {
+            targetLabel.text = "\(goal.formatString(remaining)) still needed"
+        }
     }
     
     @IBAction func pledgeButtonPressed(sender: AnyObject) {
@@ -112,20 +119,25 @@ class PledgeDetailsViewController: UIViewController {
             return
         }
         
-        showThanks()
+        showThanks(.Material)
     }
     
-    func showThanks() {
+    func showThanks(type: DonationType) {
         //update the campiagn object
         goal?.current += self.value
         
-        let alert = UIAlertController(title: "Thank You! Share the love?",
-                                      message: "Every donation goes a long way in helping your city.",
+        var msg = "Every donation goes a long way in helping your city."
+        if type == .Money {
+            msg = "You will recieve an email with your reminder and QR code. Remmeber to bring this along with you.\n\nEvery donation goes a long way in helping your city."
+        }
+        
+        let alert = UIAlertController(title: "Thank You!",
+                                      message: msg,
                                       preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Share", style: .Default, handler: { action in
             self.shareDonation()
         }))
-        alert.addAction(UIAlertAction(title: "No thank you", style: .Cancel, handler: { action in
+        alert.addAction(UIAlertAction(title: "Done", style: .Cancel, handler: { action in
             self.dismissViewControllerAnimated(true, completion: nil)
         }))
         self.presentViewController(alert, animated: true, completion: nil)
@@ -133,7 +145,7 @@ class PledgeDetailsViewController: UIViewController {
     
     func fakePayment() {
         
-        showThanks()
+        showThanks(.Money)
     }
     
     func shareDonation() {

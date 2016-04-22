@@ -40,9 +40,9 @@ class User: NSObject {
         goals[2].suffix = ("Sock", "Socks")
         
         var donations = [UserDonation]()
-        for i in 0...13 {
+        for i in 0...5 {
             let timeInterval = Double(i * (60 * 60 * 24 * 4)) //four days between donations?
-            donations.append(UserDonation(goal: goals[i%3], value: 10, date: NSDate(timeIntervalSinceNow: timeInterval)))
+            donations.append(UserDonation(goal: goals[i%3], value: 3 + (Int(rand())%40), date: NSDate(timeIntervalSinceNow: timeInterval)))
         }
         return donations
     }
