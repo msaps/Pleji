@@ -2,7 +2,7 @@
     "campaigns": [{
                   "title": "Barnabus - Christmas Appeal",
                   "description": "We know you want to make a difference so we've come up with some suggestions of how you can help bring Joy at this special time of year.",
-                  "image": "",
+                  "image": "barnabus_hero",
                   "endDate": "2016-04-22T11:43:38+00:00",
                   "logo": "barnabus_logo",
                   "organiser": "Barnabus",
@@ -97,7 +97,7 @@
                   }, {
                   "title": "Friday Dental Surgery",
                   "description": "With the great support of a local dentist we are able to offer this service please contact Fie on 07543 590330 for info and details.",
-                  "image": "",
+                  "image": "streetskitchen_hero",
                   "endDate": "2016-04-28T11:43:38+00:00",
                   "logo": "streetskitchen_logo",
                   "organiser": "Streets Kitchen",
