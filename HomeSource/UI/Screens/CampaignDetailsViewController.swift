@@ -63,7 +63,7 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
         case 0:
             let headerCell = collectionView.dequeueReusableCellWithReuseIdentifier("campaignHeaderCell", forIndexPath: indexPath) as! CampaignHeaderCell
             
-            headerCell.backgroundImageView?.image = UIImage(named: "hero_image_header")
+            headerCell.backgroundImageView?.image = campaign?.image
             headerCell.titleLabel?.text = campaign?.title
             headerCell.subtitleLabel?.text = campaign?.organiser
             
