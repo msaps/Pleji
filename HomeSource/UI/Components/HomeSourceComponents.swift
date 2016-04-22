@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GradientCircularProgress
 
 class HomeSourceNavigationBar: UINavigationBar {
     
@@ -20,4 +21,78 @@ class HomeSourceNavigationBar: UINavigationBar {
                                                             forState: UIControlState.Normal)
     }
     
+}
+
+@IBDesignable
+class CircularView: UIView {
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.layer.cornerRadius = self.bounds.size.width / 2.0
+    }
+}
+
+@IBDesignable
+class RoundRectButton: UIButton {
+    
+    @IBInspectable var normalBackgroundColor: UIColor? {
+        willSet {
+            self.backgroundColor = newValue
+        }
+    }
+    @IBInspectable var highlightBackgroundColor: UIColor?
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.normalBackgroundColor = self.backgroundColor!
+        self.highlightBackgroundColor = self.backgroundColor!.colorWithAlphaComponent(0.75)
+    }
+    
+    override var highlighted: Bool {
+        willSet {
+            UIView.animateWithDuration(0.25) { 
+                self.backgroundColor = newValue ? self.highlightBackgroundColor : self.normalBackgroundColor
+            }
+        }
+    }
+    
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.layer.cornerRadius = 4.0
+    }
+}
+
+public struct HomeSourceCircularProgressStyle : StyleProperty {
+    /*** style properties **********************************************************************************/
+    
+    // Progress Size
+    public var progressSize: CGFloat = 80
+    
+    // Gradient Circular
+    public var arcLineWidth: CGFloat = 6
+    public var startArcColor: UIColor = UIColor.greenColor()
+    public var endArcColor: UIColor = UIColor.greenColor()
+    
+    // Base Circular
+    public var baseLineWidth: CGFloat? = 6
+    public var baseArcColor: UIColor? = UIColor.whiteColor().colorWithAlphaComponent(0.6)
+    
+    // Ratio
+    public var ratioLabelFont: UIFont? = UIFont(name: "Verdana-Bold", size: 0)
+    public var ratioLabelFontColor: UIColor? = UIColor.whiteColor()
+    
+    // Message
+    public var messageLabelFont: UIFont? = UIFont.systemFontOfSize(16.0)
+    public var messageLabelFontColor: UIColor? = UIColor.whiteColor()
+    
+    // Background
+    public var backgroundStyle: BackgroundStyles = .None
+    
+    /*** style properties **********************************************************************************/
+    
+    public init() {}
 }

@@ -5,6 +5,7 @@
                   
                   "image": "http://placekitten.com/780/460",
                   "endDate": "2016-04-22T11:43:38+00:00",
+                  "organiser": "The best charity",
                   "goals": [{
                             "title": "Socks",
                             "subtitle": "We need socks for winter",
@@ -22,6 +23,7 @@
                   
                   "image": "http://placekitten.com/780/460",
                   "endDate": "2016-04-28T11:43:38+00:00",
+                  "organiser": "The best charity",
                   "goals": [{
                             "title": "Funding",
                             "subtitle": "Money for housing project",
@@ -39,6 +41,7 @@
                   
                   "image": "http://placekitten.com/780/460",
                   "endDate": "2016-05-21T11:43:38+00:00",
+                  "organiser": "The best charity",
                   "goals": [{
                             "title": "Volunteers",
                             "subtitle": "We need you",

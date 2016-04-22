@@ -60,7 +60,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
         cell.timeRemainingView?.date = campaign.endDate
         
         let progress = GradientCircularProgress()
-        let progressView = progress.showAtRatio(frame: cell.progressView!.bounds, display: true, style: MyStyle())
+        let progressView = progress.showAtRatio(frame: cell.progressView!.bounds, display: true, style: HomeSourceCircularProgressStyle())
         progressView?.backgroundColor = UIColor.clearColor()
         progress.updateRatio(0.4)
         cell.progressView?.addSubview(progressView!)
@@ -100,58 +100,36 @@ class DiscoverTimeRemainingView: UIView {
     
     var date: NSDate? {
         willSet {
-            let timePeriod = DTTimePeriod(startDate: NSDate(), endDate: newValue)
-            
-            var timeComponent = timePeriod.durationInDays()
-            var timeString: String
+            self.titleLabel?.text = self.timeRemainingStringForDate(newValue!)
+        }
+    }
+    
+    func timeRemainingStringForDate(date: NSDate?) -> String? {
+        if date == nil {
+            return nil
+        }
+        
+        let timePeriod = DTTimePeriod(startDate: NSDate(), endDate: date)
+        
+        var timeComponent = timePeriod.durationInDays()
+        var timeString: String
+        if timeComponent == 0 {
+            timeComponent = timePeriod.durationInHours()
             if timeComponent == 0 {
-                timeComponent = timePeriod.durationInHours()
+                timeComponent = timePeriod.durationInMinutes()
                 if timeComponent == 0 {
-                    timeComponent = timePeriod.durationInMinutes()
-                    if timeComponent == 0 {
-                        timeString = "Finishing now..."
-                    } else {
-                        timeString = String(format: "%i minutes left", NSInteger(timeComponent))
-                    }
+                    timeString = "Finishing now..."
                 } else {
-                    timeString = String(format: "%i hours left", NSInteger(timeComponent))
+                    timeString = String(format: "%i minutes left", NSInteger(timeComponent))
                 }
             } else {
-                timeString = String(format: "%i days left", NSInteger(timeComponent))
+                timeString = String(format: "%i hours left", NSInteger(timeComponent))
             }
-            
-            self.titleLabel?.text = timeString
+        } else {
+            timeString = String(format: "%i days left", NSInteger(timeComponent))
         }
+        
+        return timeString
     }
 }
 
-public struct MyStyle : StyleProperty {
-    /*** style properties **********************************************************************************/
-    
-    // Progress Size
-    public var progressSize: CGFloat = 80
-    
-    // Gradient Circular
-    public var arcLineWidth: CGFloat = 6
-    public var startArcColor: UIColor = UIColor.greenColor()
-    public var endArcColor: UIColor = UIColor.greenColor()
-    
-    // Base Circular
-    public var baseLineWidth: CGFloat? = 6
-    public var baseArcColor: UIColor? = UIColor.whiteColor().colorWithAlphaComponent(0.6)
-    
-    // Ratio
-    public var ratioLabelFont: UIFont? = UIFont(name: "Verdana-Bold", size: 0)
-    public var ratioLabelFontColor: UIColor? = UIColor.whiteColor()
-    
-    // Message
-    public var messageLabelFont: UIFont? = UIFont.systemFontOfSize(16.0)
-    public var messageLabelFontColor: UIColor? = UIColor.whiteColor()
-    
-    // Background
-    public var backgroundStyle: BackgroundStyles = .None
-    
-    /*** style properties **********************************************************************************/
-    
-    public init() {}
-}
