@@ -68,22 +68,41 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
             let progress = GradientCircularProgress()
             let progressView = progress.showAtRatio(frame: headerCell.progressContainerView!.bounds, display: true, style: CampaignDetailsCircularProgressStyle())
             progressView?.backgroundColor = UIColor.clearColor()
-            progress.updateRatio(0.4)
+            
+            let overallProgress = CGFloat(campaign?.getOverallProgress() ?? 0)
+            progress.updateRatio(overallProgress)
+            headerCell.progressLabel?.text = String(format: "%i%%",  NSInteger((overallProgress * 100)))
+            
             headerCell.progressContainerView?.addSubview(progressView!)
             
             cell = headerCell
         
         default:
             let goalCell = collectionView.dequeueReusableCellWithReuseIdentifier("campaignGoalCell", forIndexPath: indexPath) as! CampaignGoalCell
-            let goal = self.campaign?.goals[indexPath.row]
+            let goal = self.campaign!.goals[indexPath.row]
             
             goalCell.viewController = self
             goalCell.goal = goal
             
+            goalCell.titleLabel?.text = (goal.title).uppercaseString
+            goalCell.goalLabel?.text = goal.getTargetString()
+            
+            var progressString: String
+            if goal.current == goal.target {
+                progressString = "Complete!"
+                goalCell.pledgeButton?.enabled = false
+                goalCell.pledgeButton?.setTitle("Complete!", forState: UIControlState.Normal)
+            } else {
+                progressString = String(format: "%i/%i %@", goal.current, goal.target, "items")
+                goalCell.pledgeButton?.enabled = true
+                goalCell.pledgeButton?.setTitle("Pledge", forState: UIControlState.Normal)
+            }
+            goalCell.progressLabel?.text = progressString
+            
             let progress = GradientCircularProgress()
             let progressView = progress.showAtRatio(frame: goalCell.progressContainer!.bounds, display: true, style: CampaignDetailsProgressCellCircularProgressStyle())
             progressView?.backgroundColor = UIColor.clearColor()
-            progress.updateRatio(0.4)
+            progress.updateRatio(CGFloat(goal.getPercentageOfGoal()))
             goalCell.progressContainer?.addSubview(progressView!)
             
             cell = goalCell
@@ -137,6 +156,8 @@ class CampaignHeaderCell: UICollectionViewCell {
 class CampaignGoalCell: UICollectionViewCell {
     
     // MARK - Properties
+    
+    @IBOutlet var titleLabel: UILabel?
     
     @IBOutlet var goalLabel: UILabel?
     
