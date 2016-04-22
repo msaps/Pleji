@@ -44,8 +44,11 @@ class RoundRectButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        self.normalBackgroundColor = self.backgroundColor!
-        self.highlightBackgroundColor = self.backgroundColor!.colorWithAlphaComponent(0.75)
+        if self.backgroundColor != nil {
+            self.normalBackgroundColor = self.backgroundColor!
+            self.highlightBackgroundColor = self.backgroundColor!.colorWithAlphaComponent(0.75)
+
+        }
     }
     
     override var highlighted: Bool {

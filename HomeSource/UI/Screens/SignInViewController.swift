@@ -16,6 +16,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var facebookImageView: UIImageView!
     
     // MARK - Lifecycle
     
@@ -31,7 +32,7 @@ class SignInViewController: UIViewController {
         
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 0
-        style.maximumLineHeight = 30
+        style.maximumLineHeight = 34
         
         let title = NSMutableAttributedString(string: titleString)
         title.addAttribute(NSForegroundColorAttributeName, value: UIColor.plejiGreen(), range: range)
@@ -55,12 +56,14 @@ class SignInViewController: UIViewController {
         
         self.activityIndicator.startAnimating()
         self.signInButton.hidden = true
+        self.facebookImageView.hidden = true
         
         HomeSourceService.instance().login({success, error in
             self.activityIndicator.stopAnimating()
             if let error = error {
                 print(error)
                 self.signInButton.hidden = false
+                self.facebookImageView.hidden = false
             } else {
                 self.showSuccessViewController()
             }
