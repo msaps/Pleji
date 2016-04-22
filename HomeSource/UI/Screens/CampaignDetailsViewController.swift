@@ -23,6 +23,8 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        collectionView?.reloadData()
+        
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     

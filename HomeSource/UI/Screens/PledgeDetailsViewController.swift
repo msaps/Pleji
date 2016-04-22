@@ -89,6 +89,8 @@ class PledgeDetailsViewController: UIViewController {
     }
     
     @IBAction func pledgeButtonPressed(sender: AnyObject) {
+        //update the campiagn object
+        goal?.current += self.value
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
