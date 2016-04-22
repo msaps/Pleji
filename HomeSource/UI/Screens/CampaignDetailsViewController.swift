@@ -14,7 +14,9 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
     // MARK - Properties
     
     var campaign: Campaign?
+    
     @IBOutlet var collectionView: UICollectionView?
+    @IBOutlet var statusBarOverlay: UIView?
     
     // MARK - Lifecycle
     
@@ -138,6 +140,27 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
             return UIEdgeInsetsMake(0.0, 0.0, 12, 0.0)
         default:
             return UIEdgeInsetsMake(12, 0.0, 12, 0.0)
+        }
+    }
+    
+    // MARK - UIScrollViewDelegate
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let contentOffset = scrollView.contentOffset
+        let yOffset = contentOffset.y
+        
+        if yOffset >= 240.0 {
+            if self.statusBarOverlay?.alpha == 0.0 {
+                UIView.animateWithDuration(0.25, animations: {
+                    self.statusBarOverlay?.alpha = 1.0
+                })
+            }
+        } else {
+            if self.statusBarOverlay?.alpha == 1.0 {
+                UIView.animateWithDuration(0.25, animations: { 
+                    self.statusBarOverlay?.alpha = 0.0
+                })
+            }
         }
     }
 }
