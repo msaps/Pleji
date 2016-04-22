@@ -23,7 +23,6 @@ class HomeSourceNavigationBar: UINavigationBar {
     
 }
 
-@IBDesignable
 class CircularView: UIView {
     
     override func layoutSubviews() {
@@ -33,7 +32,6 @@ class CircularView: UIView {
     }
 }
 
-@IBDesignable
 class RoundRectButton: UIButton {
     
     @IBInspectable var normalBackgroundColor: UIColor? {

@@ -47,7 +47,7 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
         case 0:
             return 1
         case 1:
-            return 2
+            return (self.campaign?.goals.count ?? 0)
         default:
             return 0
         }
@@ -74,11 +74,21 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
             cell = headerCell
         
         default:
-            let goalCell = collectionView.dequeueReusableCellWithReuseIdentifier("campaignGoalCell", forIndexPath: indexPath)
+            let goalCell = collectionView.dequeueReusableCellWithReuseIdentifier("campaignGoalCell", forIndexPath: indexPath) as! CampaignGoalCell
+            let goal = self.campaign?.goals[indexPath.row]
+            
+            goalCell.viewController = self
+            goalCell.goal = goal
+            
+            let progress = GradientCircularProgress()
+            let progressView = progress.showAtRatio(frame: goalCell.progressContainer!.bounds, display: true, style: CampaignDetailsProgressCellCircularProgressStyle())
+            progressView?.backgroundColor = UIColor.clearColor()
+            progress.updateRatio(0.4)
+            goalCell.progressContainer?.addSubview(progressView!)
             
             cell = goalCell
+            
         }
-        
         
         return cell
     }
@@ -126,7 +136,38 @@ class CampaignHeaderCell: UICollectionViewCell {
 
 class CampaignGoalCell: UICollectionViewCell {
     
-//    @IBOutlet var 
+    // MARK - Properties
+    
+    @IBOutlet var goalLabel: UILabel?
+    
+    @IBOutlet var typeImage: UIImage?
+    @IBOutlet var typeLabel: UILabel?
+    
+    @IBOutlet var progressLabel: UILabel?
+    @IBOutlet var progressContainer: UIView?
+    
+    @IBOutlet var pledgeButton: UIButton?
+    
+    var viewController: UIViewController?
+    var goal: Goal?
+    
+    // MARK - Lifecycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.pledgeButton?.addTarget(self, action: #selector(pledgeButtonPressed), forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
+    @objc func pledgeButtonPressed(sender: AnyObject) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let pledgeViewController = storyboard.instantiateViewControllerWithIdentifier("PledgeNavigationController")
+        
+        if self.viewController != nil {
+            self.viewController!.presentViewController(pledgeViewController, animated: true, completion: nil)
+        }
+    }
 }
 
 public struct CampaignDetailsCircularProgressStyle : StyleProperty {
@@ -143,6 +184,37 @@ public struct CampaignDetailsCircularProgressStyle : StyleProperty {
     // Base Circular
     public var baseLineWidth: CGFloat? = 4
     public var baseArcColor: UIColor? = UIColor.clearColor()
+    
+    // Ratio
+    public var ratioLabelFont: UIFont? = UIFont.systemFontOfSize(0.0, weight: UIFontWeightLight)
+    public var ratioLabelFontColor: UIColor? = UIColor.whiteColor()
+    
+    // Message
+    public var messageLabelFont: UIFont? = UIFont.systemFontOfSize(16.0)
+    public var messageLabelFontColor: UIColor? = UIColor.whiteColor()
+    
+    // Background
+    public var backgroundStyle: BackgroundStyles = .None
+    
+    /*** style properties **********************************************************************************/
+    
+    public init() {}
+}
+
+public struct CampaignDetailsProgressCellCircularProgressStyle : StyleProperty {
+    /*** style properties **********************************************************************************/
+    
+    // Progress Size
+    public var progressSize: CGFloat = 30
+    
+    // Gradient Circular
+    public var arcLineWidth: CGFloat = 4
+    public var startArcColor: UIColor = UIColor.greenColor()
+    public var endArcColor: UIColor = UIColor.greenColor()
+    
+    // Base Circular
+    public var baseLineWidth: CGFloat? = 4
+    public var baseArcColor: UIColor? = UIColor.lightGrayColor()
     
     // Ratio
     public var ratioLabelFont: UIFont? = UIFont.systemFontOfSize(0.0, weight: UIFontWeightLight)
