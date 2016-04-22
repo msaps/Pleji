@@ -13,7 +13,7 @@ import DateTools
 class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     // MARK - Properties
-    @IBOutlet var collectionView: UICollectionView?
+    @IBOutlet weak var collectionView: UICollectionView?
     var campaigns: Array<Campaign>?
     
     // MARK - Lifecycle
@@ -88,19 +88,19 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
 
 class DiscoverCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var imageView: UIImageView?
-    @IBOutlet var titleLabel: UILabel?
-    @IBOutlet var detailsLabel: UILabel?
-    @IBOutlet var backgroundImageView: UIImageView?
-    @IBOutlet var timeRemainingView: DiscoverTimeRemainingView?
+    @IBOutlet weak var imageView: UIImageView?
+    @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var detailsLabel: UILabel?
+    @IBOutlet weak var backgroundImageView: UIImageView?
+    @IBOutlet weak var timeRemainingView: DiscoverTimeRemainingView?
     
-    @IBOutlet var progressView: UIView?
+    @IBOutlet weak var progressView: UIView?
 }
 
 class DiscoverTimeRemainingView: UIView {
     
-    @IBOutlet var titleLabel: UILabel?
-    @IBOutlet var imageView: UIImageView?
+    @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var imageView: UIImageView?
     
     var date: NSDate? {
         willSet {
