@@ -74,11 +74,17 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
             cell = headerCell
         
         default:
-            let goalCell = collectionView.dequeueReusableCellWithReuseIdentifier("campaignGoalCell", forIndexPath: indexPath)
+            let goalCell = collectionView.dequeueReusableCellWithReuseIdentifier("campaignGoalCell", forIndexPath: indexPath) as! CampaignGoalCell
+            
+            let progress = GradientCircularProgress()
+            let progressView = progress.showAtRatio(frame: goalCell.progressContainer!.bounds, display: true, style: CampaignDetailsProgressCellCircularProgressStyle())
+            progressView?.backgroundColor = UIColor.clearColor()
+            progress.updateRatio(0.4)
+            goalCell.progressContainer?.addSubview(progressView!)
             
             cell = goalCell
+            
         }
-        
         
         return cell
     }
@@ -126,7 +132,15 @@ class CampaignHeaderCell: UICollectionViewCell {
 
 class CampaignGoalCell: UICollectionViewCell {
     
-//    @IBOutlet var 
+    @IBOutlet var goalLabel: UILabel?
+    
+    @IBOutlet var typeImage: UIImage?
+    @IBOutlet var typeLabel: UILabel?
+    
+    @IBOutlet var progressLabel: UILabel?
+    @IBOutlet var progressContainer: UIView?
+    
+    @IBOutlet var pledgeButton: UIButton?
 }
 
 public struct CampaignDetailsCircularProgressStyle : StyleProperty {
@@ -143,6 +157,37 @@ public struct CampaignDetailsCircularProgressStyle : StyleProperty {
     // Base Circular
     public var baseLineWidth: CGFloat? = 4
     public var baseArcColor: UIColor? = UIColor.clearColor()
+    
+    // Ratio
+    public var ratioLabelFont: UIFont? = UIFont.systemFontOfSize(0.0, weight: UIFontWeightLight)
+    public var ratioLabelFontColor: UIColor? = UIColor.whiteColor()
+    
+    // Message
+    public var messageLabelFont: UIFont? = UIFont.systemFontOfSize(16.0)
+    public var messageLabelFontColor: UIColor? = UIColor.whiteColor()
+    
+    // Background
+    public var backgroundStyle: BackgroundStyles = .None
+    
+    /*** style properties **********************************************************************************/
+    
+    public init() {}
+}
+
+public struct CampaignDetailsProgressCellCircularProgressStyle : StyleProperty {
+    /*** style properties **********************************************************************************/
+    
+    // Progress Size
+    public var progressSize: CGFloat = 30
+    
+    // Gradient Circular
+    public var arcLineWidth: CGFloat = 4
+    public var startArcColor: UIColor = UIColor.greenColor()
+    public var endArcColor: UIColor = UIColor.greenColor()
+    
+    // Base Circular
+    public var baseLineWidth: CGFloat? = 4
+    public var baseArcColor: UIColor? = UIColor.lightGrayColor()
     
     // Ratio
     public var ratioLabelFont: UIFont? = UIFont.systemFontOfSize(0.0, weight: UIFontWeightLight)
