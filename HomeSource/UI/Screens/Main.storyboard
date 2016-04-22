@@ -871,6 +871,7 @@
                                             <outlet property="progressContainer" destination="pmg-o9-mE2" id="5Uw-qw-H8s"/>
                                             <outlet property="progressLabel" destination="egh-fs-jqw" id="ENc-4R-D4a"/>
                                             <outlet property="titleLabel" destination="Sqy-GA-uuT" id="zLt-EP-p8z"/>
+                                            <outlet property="typeLabel" destination="e0P-gb-cg5" id="7hf-nK-O9l"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

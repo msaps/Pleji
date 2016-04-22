@@ -88,6 +88,7 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
             
             goalCell.titleLabel?.text = (goal.title).uppercaseString
             goalCell.goalLabel?.text = goal.getTargetString()
+            goalCell.typeLabel?.text = goal.getTypeString()
             
             var progressString: String
             if goal.current == goal.target {
@@ -184,7 +185,6 @@ class CampaignGoalCell: UICollectionViewCell {
     
     @IBOutlet var goalLabel: UILabel?
     
-    @IBOutlet var typeImage: UIImage?
     @IBOutlet var typeLabel: UILabel?
     
     @IBOutlet var progressLabel: UILabel?
