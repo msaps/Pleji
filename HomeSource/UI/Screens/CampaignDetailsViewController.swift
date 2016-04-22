@@ -124,6 +124,11 @@ class CampaignHeaderCell: UICollectionViewCell {
 
 }
 
+class CampaignGoalCell: UICollectionViewCell {
+    
+//    @IBOutlet var 
+}
+
 public struct CampaignDetailsCircularProgressStyle : StyleProperty {
     /*** style properties **********************************************************************************/
     
