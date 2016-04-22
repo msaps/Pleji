@@ -12,6 +12,9 @@ class AuthenticatedNavigationController: UINavigationController {
     
     // MARK - Init
     
+    //HAAACCCKKK!!!
+    var attributes : [AnyObject]?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
