@@ -29,6 +29,11 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
         }
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "campaignDetailsPush" {
             let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first
