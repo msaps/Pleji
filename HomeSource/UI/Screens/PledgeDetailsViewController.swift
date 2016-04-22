@@ -43,8 +43,6 @@ class PledgeDetailsViewController: UIViewController {
         donationSlider.maximumValue = Float(goal!.target - goal!.current)
         donationSlider.value = 1
         
-        print("min: \(donationSlider.minimumValue). max: \(donationSlider.maximumValue)")
-        
         //Slider listener for value change
         donationSlider.addTarget(self, action: #selector(PledgeDetailsViewController.sliderDidUpdate), forControlEvents: .ValueChanged)
         
@@ -89,6 +87,13 @@ class PledgeDetailsViewController: UIViewController {
     }
     
     @IBAction func pledgeButtonPressed(sender: AnyObject) {
+        
+        if goal?.donationType == .Money {
+            //Need to show the payment screen first
+            self.performSegueWithIdentifier("presentPaymentScreen", sender: nil)
+            return
+        }
+        
         //update the campiagn object
         goal?.current += self.value
         
@@ -122,4 +127,13 @@ class PledgeDetailsViewController: UIViewController {
         self.presentViewController(shareVC, animated: true, completion: nil)
     }
     
+    ///MARK: segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "presentPaymentScreen" {
+            let controller = segue.destinationViewController as! PaymentViewController
+            controller.goal = self.goal
+            controller.value = self.value
+        }
+    }
 }

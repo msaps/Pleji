@@ -121,9 +121,9 @@
                             "subtitle": "Sponsor a sleeper",
                             "target": 500,
                             "current": 340,
-                            "suffix": {
-                            "singular": "hour",
-                            "plural": "hours"
+                            "prefix": {
+                            "singular": "£",
+                            "plural": "£"
                             },
                             "type" : 0
                             }]
