@@ -406,12 +406,15 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="signedInPressed:" destination="Adp-TI-zoa" eventType="touchUpInside" id="cmT-Hg-35o"/>
+                                            <action selector="facebookSignInPressed:" destination="Adp-TI-zoa" eventType="touchUpInside" id="Y2j-hx-A7m"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="JYC-JL-hXh">
                                         <rect key="frame" x="152" y="543" width="30" height="24"/>
                                     </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="fbA-xV-eXD">
+                                        <rect key="frame" x="380" y="545" width="20" height="20"/>
+                                    </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOo-dx-cNl" userLabel="Twitter Sign In" customClass="RoundRectButton" customModule="HomeSource" customModuleProvider="target">
                                         <rect key="frame" x="310" y="530" width="160" height="50"/>
                                         <constraints>
@@ -427,6 +430,9 @@
                                                 <color key="value" red="0.089749472295982929" green="0.58101926069234078" blue="0.79213683069381602" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="twitterSignInPressed:" destination="Adp-TI-zoa" eventType="touchUpInside" id="mDs-OG-dOC"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="GWc-dh-XoV">
                                         <rect key="frame" x="334" y="543" width="30" height="24"/>
@@ -482,10 +488,12 @@
                                     <constraint firstItem="44Y-8K-tct" firstAttribute="top" secondItem="Y01-O5-FmY" secondAttribute="top" id="GcY-Nc-wsf"/>
                                     <constraint firstItem="hzs-he-HzQ" firstAttribute="centerX" secondItem="1fd-SB-VtI" secondAttribute="centerX" id="JJb-uO-EIN"/>
                                     <constraint firstItem="mS6-nR-7Yl" firstAttribute="centerX" secondItem="Y01-O5-FmY" secondAttribute="centerX" id="Jfb-dU-8wx"/>
+                                    <constraint firstItem="fbA-xV-eXD" firstAttribute="centerX" secondItem="dOo-dx-cNl" secondAttribute="centerX" id="M1h-1p-hHs"/>
                                     <constraint firstItem="GWc-dh-XoV" firstAttribute="leading" secondItem="dOo-dx-cNl" secondAttribute="leading" constant="24" id="R5d-6b-7oc"/>
                                     <constraint firstItem="GWc-dh-XoV" firstAttribute="centerY" secondItem="dOo-dx-cNl" secondAttribute="centerY" id="Xyz-YB-HBr"/>
                                     <constraint firstItem="Nvb-ge-WSF" firstAttribute="top" secondItem="Y01-O5-FmY" secondAttribute="top" constant="64" id="aIe-m7-W2k"/>
                                     <constraint firstAttribute="trailing" secondItem="jvc-GO-g3d" secondAttribute="trailing" constant="20" id="aYu-wA-oS4"/>
+                                    <constraint firstItem="fbA-xV-eXD" firstAttribute="centerY" secondItem="dOo-dx-cNl" secondAttribute="centerY" id="af6-Pd-pV9"/>
                                     <constraint firstAttribute="bottom" secondItem="44Y-8K-tct" secondAttribute="bottom" id="bSU-7u-vQo"/>
                                     <constraint firstItem="mS6-nR-7Yl" firstAttribute="top" secondItem="Nvb-ge-WSF" secondAttribute="bottom" constant="20" id="cXM-OW-5Rg"/>
                                     <constraint firstItem="1fd-SB-VtI" firstAttribute="centerY" secondItem="hzs-he-HzQ" secondAttribute="centerY" id="pp2-DJ-iFS"/>
@@ -513,11 +521,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="hzs-he-HzQ" id="dcI-hJ-DYg"/>
+                        <outlet property="facebookActivityIndicator" destination="hzs-he-HzQ" id="2O2-DU-s7j"/>
                         <outlet property="facebookImageView" destination="JYC-JL-hXh" id="zgY-H2-ZhG"/>
+                        <outlet property="facebookSignInButton" destination="1fd-SB-VtI" id="HxJ-zP-LDL"/>
                         <outlet property="messageLabel" destination="Wty-WH-gip" id="Wo0-lq-eeM"/>
-                        <outlet property="signInButton" destination="1fd-SB-VtI" id="dte-kD-sZN"/>
                         <outlet property="titleLabel" destination="8qt-8V-ZKh" id="LCL-qK-JMr"/>
+                        <outlet property="twitterActivityIndicator" destination="fbA-xV-eXD" id="EFA-Y7-dkj"/>
+                        <outlet property="twitterImageView" destination="GWc-dh-XoV" id="q1M-u5-0fB"/>
+                        <outlet property="twitterSignInButton" destination="dOo-dx-cNl" id="yAw-D8-lJP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="diP-lr-GxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
