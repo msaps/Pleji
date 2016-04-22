@@ -30,12 +30,14 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first
-        if let index = indexPath?.row {
-            let campaign = self.campaigns![index]
-            
-            let detailsViewController = segue.destinationViewController as! CampaignDetailsViewController
-            detailsViewController.campaign = campaign
+        if segue.identifier == "campaignDetailsPush" {
+            let indexPath = self.collectionView?.indexPathsForSelectedItems()?.first
+            if let index = indexPath?.row {
+                let campaign = self.campaigns![index]
+                
+                let detailsViewController = segue.destinationViewController as! CampaignDetailsViewController
+                detailsViewController.campaign = campaign
+            }
         }
     }
     
