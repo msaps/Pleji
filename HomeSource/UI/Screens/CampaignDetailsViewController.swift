@@ -30,8 +30,6 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     // MARK - Interaction
