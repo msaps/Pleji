@@ -91,7 +91,17 @@ class PledgeDetailsViewController: UIViewController {
     @IBAction func pledgeButtonPressed(sender: AnyObject) {
         //update the campiagn object
         goal?.current += self.value
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        let alert = UIAlertController(title: "Thank You! Share the love?",
+                          message: "Every donation goes a long way in helping your city.",
+                          preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Share", style: .Default, handler: { action in
+            self.shareDonation()
+        }))
+        alert.addAction(UIAlertAction(title: "No thank you", style: .Cancel, handler: { action in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     func shareDonation() {
@@ -106,6 +116,9 @@ class PledgeDetailsViewController: UIViewController {
         let image: UIImage = UIImage(named: "SocialIcon")!
         
         let shareVC: UIActivityViewController = UIActivityViewController(activityItems: [image, shareTitle, url], applicationActivities: nil)
+        shareVC.completionWithItemsHandler = { _, _, _, _ in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
         self.presentViewController(shareVC, animated: true, completion: nil)
     }
     
