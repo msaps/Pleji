@@ -4,7 +4,7 @@
                   "description": "We know you want to make a difference so we've come up with some suggestions of how you can help bring Joy at this special time of year.",
                   "image": "http://placekitten.com/780/460",
                   "endDate": "2016-04-22T11:43:38+00:00",
-                  "organiser": "The best charity",
+                  "organiser": "Barnabus",
                   "goals": [{
                             "title": "Gloves",
                             "subtitle": "",
@@ -94,40 +94,38 @@
                             "type" : 2
                             }]
                   }, {
-                  "title": "Campign Title 2",
-                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                  
+                  "title": "Friday Dental Surgery",
+                  "description": "With the great support of a local dentist we are able to offer this service please contact Fie on 07543 590330 for info and details.",
                   "image": "http://placekitten.com/780/460",
                   "endDate": "2016-04-28T11:43:38+00:00",
-                  "organiser": "The best charity",
+                  "organiser": "Streets Kitchen",
                   "goals": [{
-                            "title": "Funding",
+                            "title": "Dentists",
                             "subtitle": "Money for housing project",
-                            "target": 536,
-                            "current": 309,
+                            "target": 2,
+                            "current": 1,
                             "prefix": {
-                            "singular": "£",
-                            "plural": "£"
+                            "singular": "Dentist",
+                            "plural": "Dentists"
                             },
-                            "type" : 0
+                            "type" : 1
                             }]
                   }, {
-                  "title": "Campign Title 3",
-                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                  
+                  "title": "Sleep Out",
+                  "description": "Byte Night is now the UK's largest sleep out event, with individuals and teams from the technology and business services sleeping out to raise vital funds to prevent youth homelessness.",
                   "image": "http://placekitten.com/780/460",
                   "endDate": "2016-05-21T11:43:38+00:00",
-                  "organiser": "The best charity",
+                  "organiser": "Byte Night",
                   "goals": [{
-                            "title": "Volunteers",
-                            "subtitle": "We need you",
-                            "target": 38,
-                            "current": 1,
+                            "title": "Donation",
+                            "subtitle": "Sponsor a sleeper",
+                            "target": 500,
+                            "current": 340,
                             "suffix": {
                             "singular": "hour",
                             "plural": "hours"
                             },
-                            "type" : 1
+                            "type" : 0
                             }]
                   }]
 }
