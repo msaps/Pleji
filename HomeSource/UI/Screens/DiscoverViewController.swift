@@ -62,7 +62,7 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
         
         cell.titleLabel?.text = campaign.title
         cell.detailsLabel?.text = campaign.campaignDescription
-        cell.imageView?.image = UIImage(named: "logo")
+        cell.imageView?.image = campaign.logo
         cell.backgroundImageView?.image = UIImage(named: "hero_image_header")
         cell.timeRemainingView?.date = campaign.endDate
         

@@ -108,6 +108,10 @@ public class HomeSourceService: NSObject {
             campaign.campaignDescription = description
             campaign.endDate = endDate
             campaign.organiser = organiser
+            if let logoName = campaignData["logo"].string,
+                let image = UIImage(named: logoName) {
+                campaign.logo = image
+            }
             campaign.image = campaignData["image"].string
             campaigns.append(campaign)
             
