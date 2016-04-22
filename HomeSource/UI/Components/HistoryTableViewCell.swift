@@ -58,7 +58,7 @@ class HistoryTableViewCell: UITableViewCell {
         case .Money:
             donationTypeImageView.image = UIImage(named: "money")
         case .Material:
-            donationTypeImageView.image = UIImage(named: "clock") //TODO: image for material
+            donationTypeImageView.image = UIImage(named: "box")
         }
         
         donationTitleLabel.text = userDontation.getTitle()
