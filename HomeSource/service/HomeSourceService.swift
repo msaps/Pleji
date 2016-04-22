@@ -112,7 +112,10 @@ public class HomeSourceService: NSObject {
                 let image = UIImage(named: logoName) {
                 campaign.logo = image
             }
-            campaign.image = campaignData["image"].string
+            if let imageName = campaignData["image"].string,
+                let image = UIImage(named: imageName){
+                campaign.image = image
+            }
             campaigns.append(campaign)
             
             //add goals to out campaign

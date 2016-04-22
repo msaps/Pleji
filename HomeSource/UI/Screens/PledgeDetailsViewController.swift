@@ -61,7 +61,7 @@ class PledgeDetailsViewController: UIViewController {
             return
         }
         
-        campaignImageView.image = UIImage(named: "hero_image_header")
+        campaignImageView.image = campaign.image
         campaignTitleLabel.text = campaign.title
         campaignOrganiserLabel.text = campaign.organiser
     }
