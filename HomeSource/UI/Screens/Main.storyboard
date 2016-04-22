@@ -195,10 +195,10 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vff-mf-1r8" userLabel="Background View">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rIs-cn-bSU">
+                                                        <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rIs-cn-bSU">
                                                             <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
                                                         </imageView>
-                                                        <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-qk-BfZ" userLabel="Blur Container View">
+                                                        <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-qk-BfZ" userLabel="Blur Container View">
                                                             <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
                                                             <subviews>
                                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKq-z7-Aqu">
@@ -220,7 +220,7 @@
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ak0-IE-Www" userLabel="Blur Overlay View">
                                                             <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                                         </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -406,12 +406,15 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="signedInPressed:" destination="Adp-TI-zoa" eventType="touchUpInside" id="cmT-Hg-35o"/>
+                                            <action selector="facebookSignInPressed:" destination="Adp-TI-zoa" eventType="touchUpInside" id="Y2j-hx-A7m"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="JYC-JL-hXh">
                                         <rect key="frame" x="152" y="543" width="30" height="24"/>
                                     </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="fbA-xV-eXD">
+                                        <rect key="frame" x="380" y="545" width="20" height="20"/>
+                                    </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOo-dx-cNl" userLabel="Twitter Sign In" customClass="RoundRectButton" customModule="HomeSource" customModuleProvider="target">
                                         <rect key="frame" x="310" y="530" width="160" height="50"/>
                                         <constraints>
@@ -427,6 +430,9 @@
                                                 <color key="value" red="0.089749472295982929" green="0.58101926069234078" blue="0.79213683069381602" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="twitterSignInPressed:" destination="Adp-TI-zoa" eventType="touchUpInside" id="mDs-OG-dOC"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="GWc-dh-XoV">
                                         <rect key="frame" x="334" y="543" width="30" height="24"/>
@@ -482,10 +488,12 @@
                                     <constraint firstItem="44Y-8K-tct" firstAttribute="top" secondItem="Y01-O5-FmY" secondAttribute="top" id="GcY-Nc-wsf"/>
                                     <constraint firstItem="hzs-he-HzQ" firstAttribute="centerX" secondItem="1fd-SB-VtI" secondAttribute="centerX" id="JJb-uO-EIN"/>
                                     <constraint firstItem="mS6-nR-7Yl" firstAttribute="centerX" secondItem="Y01-O5-FmY" secondAttribute="centerX" id="Jfb-dU-8wx"/>
+                                    <constraint firstItem="fbA-xV-eXD" firstAttribute="centerX" secondItem="dOo-dx-cNl" secondAttribute="centerX" id="M1h-1p-hHs"/>
                                     <constraint firstItem="GWc-dh-XoV" firstAttribute="leading" secondItem="dOo-dx-cNl" secondAttribute="leading" constant="24" id="R5d-6b-7oc"/>
                                     <constraint firstItem="GWc-dh-XoV" firstAttribute="centerY" secondItem="dOo-dx-cNl" secondAttribute="centerY" id="Xyz-YB-HBr"/>
                                     <constraint firstItem="Nvb-ge-WSF" firstAttribute="top" secondItem="Y01-O5-FmY" secondAttribute="top" constant="64" id="aIe-m7-W2k"/>
                                     <constraint firstAttribute="trailing" secondItem="jvc-GO-g3d" secondAttribute="trailing" constant="20" id="aYu-wA-oS4"/>
+                                    <constraint firstItem="fbA-xV-eXD" firstAttribute="centerY" secondItem="dOo-dx-cNl" secondAttribute="centerY" id="af6-Pd-pV9"/>
                                     <constraint firstAttribute="bottom" secondItem="44Y-8K-tct" secondAttribute="bottom" id="bSU-7u-vQo"/>
                                     <constraint firstItem="mS6-nR-7Yl" firstAttribute="top" secondItem="Nvb-ge-WSF" secondAttribute="bottom" constant="20" id="cXM-OW-5Rg"/>
                                     <constraint firstItem="1fd-SB-VtI" firstAttribute="centerY" secondItem="hzs-he-HzQ" secondAttribute="centerY" id="pp2-DJ-iFS"/>
@@ -513,11 +521,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="hzs-he-HzQ" id="dcI-hJ-DYg"/>
+                        <outlet property="facebookActivityIndicator" destination="hzs-he-HzQ" id="2O2-DU-s7j"/>
                         <outlet property="facebookImageView" destination="JYC-JL-hXh" id="zgY-H2-ZhG"/>
+                        <outlet property="facebookSignInButton" destination="1fd-SB-VtI" id="HxJ-zP-LDL"/>
                         <outlet property="messageLabel" destination="Wty-WH-gip" id="Wo0-lq-eeM"/>
-                        <outlet property="signInButton" destination="1fd-SB-VtI" id="dte-kD-sZN"/>
                         <outlet property="titleLabel" destination="8qt-8V-ZKh" id="LCL-qK-JMr"/>
+                        <outlet property="twitterActivityIndicator" destination="fbA-xV-eXD" id="EFA-Y7-dkj"/>
+                        <outlet property="twitterImageView" destination="GWc-dh-XoV" id="q1M-u5-0fB"/>
+                        <outlet property="twitterSignInButton" destination="dOo-dx-cNl" id="yAw-D8-lJP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="diP-lr-GxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -619,17 +630,14 @@
                                     <constraint firstItem="jFK-ah-ByN" firstAttribute="leading" secondItem="WDD-H3-Ecx" secondAttribute="leading" id="y68-Mh-ePe"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Sock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voo-qv-Crl">
-                                <rect key="frame" x="258" y="324" width="85.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 pair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voo-qv-Crl">
+                                <rect key="frame" x="275" y="380" width="51" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="10" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fdZ-jR-8sx">
-                                <rect key="frame" x="66" y="429" width="468" height="31"/>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 still needed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2l-vy-4VQ">
-                                <rect key="frame" x="249" y="467" width="103" height="21"/>
+                                <rect key="frame" x="249" y="484.5" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.80162883250000005" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -655,32 +663,44 @@
                                     <action selector="pledgeButtonPressed:" destination="fbv-zz-eb6" eventType="touchUpInside" id="wX4-vk-fRJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Socks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOc-g7-ZUK">
+                                <rect key="frame" x="260.5" y="324" width="79" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="10" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fdZ-jR-8sx">
+                                <rect key="frame" x="66" y="446" width="468" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.29803921568627451" green="0.83529411764705885" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="iOc-g7-ZUK" firstAttribute="top" secondItem="bcc-pZ-MEu" secondAttribute="bottom" constant="20" id="6Op-sd-8s2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WDD-H3-Ecx" secondAttribute="trailing" constant="-4" id="C81-gm-XLQ"/>
                             <constraint firstItem="bcc-pZ-MEu" firstAttribute="leading" secondItem="qF0-Ue-wZ6" secondAttribute="leadingMargin" constant="-20" id="DGn-Db-0ux"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bcc-pZ-MEu" secondAttribute="trailing" constant="-20" id="Dk1-7l-O5F"/>
                             <constraint firstItem="fdZ-jR-8sx" firstAttribute="leading" secondItem="qF0-Ue-wZ6" secondAttribute="leadingMargin" constant="48" id="DoW-zQ-9zu"/>
+                            <constraint firstItem="iOc-g7-ZUK" firstAttribute="centerX" secondItem="qF0-Ue-wZ6" secondAttribute="centerX" id="IKy-LE-xIa"/>
                             <constraint firstItem="WDD-H3-Ecx" firstAttribute="leading" secondItem="qF0-Ue-wZ6" secondAttribute="leadingMargin" constant="-4" id="JqI-lJ-yN2"/>
                             <constraint firstItem="voo-qv-Crl" firstAttribute="centerX" secondItem="qF0-Ue-wZ6" secondAttribute="centerX" id="Ukr-63-UGj"/>
                             <constraint firstItem="bcc-pZ-MEu" firstAttribute="top" secondItem="xw3-VP-Kha" secondAttribute="bottom" id="dX9-5d-Pea"/>
                             <constraint firstItem="voo-qv-Crl" firstAttribute="leading" secondItem="fdZ-jR-8sx" secondAttribute="trailing" constant="-274" id="f8u-zN-rCk"/>
-                            <constraint firstItem="voo-qv-Crl" firstAttribute="top" secondItem="bcc-pZ-MEu" secondAttribute="bottom" constant="20" id="fZo-EN-fUd"/>
                             <constraint firstItem="fdZ-jR-8sx" firstAttribute="top" secondItem="C2l-vy-4VQ" secondAttribute="bottom" constant="44" id="hgY-5o-uit"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fdZ-jR-8sx" secondAttribute="trailing" constant="48" id="iua-Do-fcH"/>
+                            <constraint firstItem="voo-qv-Crl" firstAttribute="top" secondItem="iOc-g7-ZUK" secondAttribute="bottom" constant="20" id="p3W-Jq-hlX"/>
                             <constraint firstItem="wSi-Nn-KDg" firstAttribute="top" secondItem="v3g-IX-udZ" secondAttribute="bottom" constant="20" id="p7m-za-BCo"/>
                             <constraint firstItem="v3g-IX-udZ" firstAttribute="centerX" secondItem="qF0-Ue-wZ6" secondAttribute="centerX" id="pE4-nG-0uu"/>
                             <constraint firstItem="WDD-H3-Ecx" firstAttribute="centerY" secondItem="bcc-pZ-MEu" secondAttribute="centerY" id="pfQ-dG-h3O"/>
-                            <constraint firstItem="fdZ-jR-8sx" firstAttribute="top" secondItem="voo-qv-Crl" secondAttribute="bottom" constant="69" id="q4S-wJ-Zv7"/>
+                            <constraint firstItem="fdZ-jR-8sx" firstAttribute="top" secondItem="voo-qv-Crl" secondAttribute="bottom" constant="40" id="q4S-wJ-Zv7"/>
                             <constraint firstItem="C2l-vy-4VQ" firstAttribute="centerX" secondItem="qF0-Ue-wZ6" secondAttribute="centerX" id="sa4-OL-yMZ"/>
                             <constraint firstItem="C2l-vy-4VQ" firstAttribute="top" secondItem="voo-qv-Crl" secondAttribute="bottom" constant="4" id="uYc-pF-syF"/>
                             <constraint firstItem="C2l-vy-4VQ" firstAttribute="top" secondItem="fdZ-jR-8sx" secondAttribute="bottom" constant="8" id="wFp-dC-tgy"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="f8u-zN-rCk"/>
                                 <exclude reference="hgY-5o-uit"/>
+                                <exclude reference="f8u-zN-rCk"/>
                                 <exclude reference="uYc-pF-syF"/>
                             </mask>
                         </variation>
@@ -698,6 +718,7 @@
                         <outlet property="campaignTitleLabel" destination="jFK-ah-ByN" id="G5y-XH-1UI"/>
                         <outlet property="donationSlider" destination="fdZ-jR-8sx" id="YKY-l0-TyW"/>
                         <outlet property="donationValueLabel" destination="voo-qv-Crl" id="jGV-Ak-qZ0"/>
+                        <outlet property="goalTitleLabel" destination="iOc-g7-ZUK" id="AJr-Zx-cSr"/>
                         <outlet property="pledgeButton" destination="v3g-IX-udZ" id="EbU-Ni-6yn"/>
                         <outlet property="targetLabel" destination="C2l-vy-4VQ" id="Qet-Yk-oA2"/>
                         <segue destination="QF4-S3-wwX" kind="show" identifier="presentPaymentScreen" id="4DY-H0-39b"/>

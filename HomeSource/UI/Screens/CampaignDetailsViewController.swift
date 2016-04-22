@@ -97,7 +97,8 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
                 goalCell.pledgeButton?.enabled = false
                 goalCell.pledgeButton?.setTitle("Complete!", forState: UIControlState.Normal)
             } else {
-                progressString = String(format: "%i/%i %@", goal.current, goal.target, "items")
+                let goalItem = (goal.target == 1) ? goal.suffix!.singular : goal.suffix!.plural
+                progressString = String(format: "%i/%i %@", goal.current, goal.target, goalItem)
                 goalCell.pledgeButton?.enabled = true
                 goalCell.pledgeButton?.setTitle("Pledge", forState: UIControlState.Normal)
             }

@@ -12,11 +12,16 @@ class SignInViewController: UIViewController {
     
     var successViewControllerIdentifier: String?
     
-    @IBOutlet weak var signInButton: ColorButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
+    @IBOutlet weak var facebookSignInButton: UIButton!
+    @IBOutlet weak var facebookActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var facebookImageView: UIImageView!
+    
+    @IBOutlet weak var twitterSignInButton: UIButton!
+    @IBOutlet weak var twitterActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var twitterImageView: UIImageView!
     
     // MARK - Lifecycle
     
@@ -41,7 +46,8 @@ class SignInViewController: UIViewController {
         
         self.titleLabel.attributedText = title
         self.messageLabel.text = "We help you to find local campaigns\nand worthwhile causes you will love."
-        self.activityIndicator.stopAnimating()
+        self.twitterActivityIndicator.stopAnimating()
+        self.facebookActivityIndicator.stopAnimating()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -52,18 +58,36 @@ class SignInViewController: UIViewController {
     
     // MARK - Interaction
     
-    @IBAction func signedInPressed(sender: AnyObject) {
+    @IBAction func twitterSignInPressed(sender: AnyObject) {
+        self.twitterActivityIndicator.startAnimating()
+        self.twitterSignInButton.hidden = true
+        self.twitterImageView.hidden = true
+        self.facebookSignInButton.userInteractionEnabled = false
         
-        self.activityIndicator.startAnimating()
-        self.signInButton.hidden = true
+        self.signedInPressed(sender)
+    }
+    
+    @IBAction func facebookSignInPressed(sender: AnyObject) {
+        self.facebookActivityIndicator.startAnimating()
+        self.facebookSignInButton.hidden = true
         self.facebookImageView.hidden = true
+        self.twitterSignInButton.userInteractionEnabled = false
         
+        self.signedInPressed(sender)
+    }
+    
+    @IBAction func signedInPressed(sender: AnyObject) {
+
         HomeSourceService.instance().login({success, error in
-            self.activityIndicator.stopAnimating()
+            self.facebookActivityIndicator.stopAnimating()
+            self.twitterActivityIndicator.stopAnimating()
+
             if let error = error {
                 print(error)
-                self.signInButton.hidden = false
+                self.facebookSignInButton.hidden = false
                 self.facebookImageView.hidden = false
+                self.twitterSignInButton.hidden = false
+                self.twitterImageView.hidden = false
             } else {
                 self.showSuccessViewController()
             }
@@ -74,7 +98,8 @@ class SignInViewController: UIViewController {
     // MARK - Internal
     
     func showSuccessViewController() {
-        self.activityIndicator.stopAnimating()
+        self.twitterActivityIndicator.stopAnimating()
+        self.facebookActivityIndicator.stopAnimating()
         
         if self.successViewControllerIdentifier != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
