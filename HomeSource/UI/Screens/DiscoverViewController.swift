@@ -117,11 +117,11 @@ class DiscoverTimeRemainingView: UIView {
         
         var timeComponent = timePeriod.durationInDays()
         var timeString: String
-        if timeComponent == 0 {
+        if NSInteger(timeComponent) == 0 {
             timeComponent = timePeriod.durationInHours()
-            if timeComponent == 0 {
+            if NSInteger(timeComponent) == 0 {
                 timeComponent = timePeriod.durationInMinutes()
-                if timeComponent == 0 {
+                if NSInteger(timeComponent) == 0 {
                     timeString = "Finishing now..."
                 } else {
                     timeString = String(format: "%i minutes left", NSInteger(timeComponent))
