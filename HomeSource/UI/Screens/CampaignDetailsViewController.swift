@@ -23,6 +23,8 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        collectionView?.reloadData()
+        
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -85,6 +87,7 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
             
             goalCell.viewController = self
             goalCell.goal = goal
+            goalCell.campaign = self.campaign
             
             goalCell.titleLabel?.text = (goal.title).uppercaseString
             goalCell.goalLabel?.text = goal.getTargetString()
@@ -194,6 +197,7 @@ class CampaignGoalCell: UICollectionViewCell {
     
     var viewController: UIViewController?
     var goal: Goal?
+    var campaign: Campaign?
     
     // MARK - Lifecycle
     
@@ -206,10 +210,13 @@ class CampaignGoalCell: UICollectionViewCell {
     @objc func pledgeButtonPressed(sender: AnyObject) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let pledgeViewController = storyboard.instantiateViewControllerWithIdentifier("PledgeNavigationController")
+        let authController = storyboard.instantiateViewControllerWithIdentifier("PledgeNavigationController") as! AuthenticatedNavigationController
+        
+        //TODO - these could be nil
+        authController.attributes = [self.campaign!, self.goal!]
         
         if self.viewController != nil {
-            self.viewController!.presentViewController(pledgeViewController, animated: true, completion: nil)
+            self.viewController!.presentViewController(authController, animated: true, completion: nil)
         }
     }
 }

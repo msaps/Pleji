@@ -494,9 +494,138 @@
                     <view key="view" contentMode="scaleToFill" id="qF0-Ue-wZ6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-pZ-MEu" userLabel="Top View">
+                                <rect key="frame" x="0.0" y="64" width="600" height="240"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AkC-as-0PC">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
+                                    </imageView>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Der-5R-aD6">
+                                        <rect key="frame" x="0.0" y="-64" width="0.0" height="0.0"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="BqS-vR-m9E">
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDD-H3-Ecx" userLabel="Text Container View">
+                                        <rect key="frame" x="202.5" y="91" width="195.5" height="58"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaign Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFK-ah-ByN">
+                                                <rect key="frame" x="0.0" y="0.0" width="195.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campaign Organiser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZ6-so-ri2">
+                                                <rect key="frame" x="0.0" y="40" width="195.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="bZ6-so-ri2" firstAttribute="top" secondItem="jFK-ah-ByN" secondAttribute="bottom" constant="4" id="0af-ne-gQb"/>
+                                            <constraint firstAttribute="bottom" secondItem="bZ6-so-ri2" secondAttribute="bottom" id="3cj-0a-BbN"/>
+                                            <constraint firstAttribute="trailing" secondItem="bZ6-so-ri2" secondAttribute="trailing" id="BSW-jE-K0w"/>
+                                            <constraint firstItem="jFK-ah-ByN" firstAttribute="top" secondItem="WDD-H3-Ecx" secondAttribute="top" id="GFg-Px-xyE"/>
+                                            <constraint firstItem="bZ6-so-ri2" firstAttribute="leading" secondItem="WDD-H3-Ecx" secondAttribute="leading" id="IQj-AQ-eWI"/>
+                                            <constraint firstAttribute="trailing" secondItem="jFK-ah-ByN" secondAttribute="trailing" id="Psg-Pg-eko"/>
+                                            <constraint firstItem="jFK-ah-ByN" firstAttribute="leading" secondItem="WDD-H3-Ecx" secondAttribute="leading" id="y68-Mh-ePe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="0Vo-YA-36z"/>
+                                    <constraint firstItem="AkC-as-0PC" firstAttribute="top" secondItem="bcc-pZ-MEu" secondAttribute="top" id="1uM-jQ-1Si"/>
+                                    <constraint firstAttribute="trailing" secondItem="AkC-as-0PC" secondAttribute="trailing" id="FsH-h4-pb3"/>
+                                    <constraint firstItem="AkC-as-0PC" firstAttribute="leading" secondItem="bcc-pZ-MEu" secondAttribute="leading" id="Kvj-al-U8q"/>
+                                    <constraint firstItem="WDD-H3-Ecx" firstAttribute="centerY" secondItem="bcc-pZ-MEu" secondAttribute="centerY" id="OXM-yB-VMq"/>
+                                    <constraint firstItem="WDD-H3-Ecx" firstAttribute="centerX" secondItem="bcc-pZ-MEu" secondAttribute="centerX" id="XaO-6R-CkT"/>
+                                    <constraint firstAttribute="bottom" secondItem="AkC-as-0PC" secondAttribute="bottom" id="aL0-be-hJ9"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Sock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voo-qv-Crl">
+                                <rect key="frame" x="258" y="324" width="85.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="10" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fdZ-jR-8sx">
+                                <rect key="frame" x="66" y="429" width="468" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 still needed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2l-vy-4VQ">
+                                <rect key="frame" x="249" y="467" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.80162883250000005" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3g-IX-udZ" customClass="RoundRectButton" customModule="HomeSource" customModuleProvider="target">
+                                <rect key="frame" x="150" y="530" width="300" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MMf-xG-d3y"/>
+                                    <constraint firstAttribute="width" constant="300" id="nxl-OL-oSO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                <state key="normal" title="Pledge"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
+                                        <color key="value" red="0.25882352939999997" green="0.81568627449999997" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                        <color key="value" red="0.20702773350000001" green="0.66182008859999997" blue="0.29881036719999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pledgeButtonPressed:" destination="fbv-zz-eb6" eventType="touchUpInside" id="wX4-vk-fRJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bcc-pZ-MEu" firstAttribute="leading" secondItem="qF0-Ue-wZ6" secondAttribute="leadingMargin" constant="-20" id="DGn-Db-0ux"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bcc-pZ-MEu" secondAttribute="trailing" constant="-20" id="Dk1-7l-O5F"/>
+                            <constraint firstItem="fdZ-jR-8sx" firstAttribute="leading" secondItem="qF0-Ue-wZ6" secondAttribute="leadingMargin" constant="48" id="DoW-zQ-9zu"/>
+                            <constraint firstItem="voo-qv-Crl" firstAttribute="centerX" secondItem="qF0-Ue-wZ6" secondAttribute="centerX" id="Ukr-63-UGj"/>
+                            <constraint firstItem="bcc-pZ-MEu" firstAttribute="top" secondItem="xw3-VP-Kha" secondAttribute="bottom" id="dX9-5d-Pea"/>
+                            <constraint firstItem="voo-qv-Crl" firstAttribute="leading" secondItem="fdZ-jR-8sx" secondAttribute="trailing" constant="-274" id="f8u-zN-rCk"/>
+                            <constraint firstItem="voo-qv-Crl" firstAttribute="top" secondItem="bcc-pZ-MEu" secondAttribute="bottom" constant="20" id="fZo-EN-fUd"/>
+                            <constraint firstItem="fdZ-jR-8sx" firstAttribute="top" secondItem="C2l-vy-4VQ" secondAttribute="bottom" constant="44" id="hgY-5o-uit"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fdZ-jR-8sx" secondAttribute="trailing" constant="48" id="iua-Do-fcH"/>
+                            <constraint firstItem="wSi-Nn-KDg" firstAttribute="top" secondItem="v3g-IX-udZ" secondAttribute="bottom" constant="20" id="p7m-za-BCo"/>
+                            <constraint firstItem="v3g-IX-udZ" firstAttribute="centerX" secondItem="qF0-Ue-wZ6" secondAttribute="centerX" id="pE4-nG-0uu"/>
+                            <constraint firstItem="fdZ-jR-8sx" firstAttribute="top" secondItem="voo-qv-Crl" secondAttribute="bottom" constant="69" id="q4S-wJ-Zv7"/>
+                            <constraint firstItem="C2l-vy-4VQ" firstAttribute="centerX" secondItem="qF0-Ue-wZ6" secondAttribute="centerX" id="sa4-OL-yMZ"/>
+                            <constraint firstItem="C2l-vy-4VQ" firstAttribute="top" secondItem="voo-qv-Crl" secondAttribute="bottom" constant="4" id="uYc-pF-syF"/>
+                            <constraint firstItem="C2l-vy-4VQ" firstAttribute="top" secondItem="fdZ-jR-8sx" secondAttribute="bottom" constant="8" id="wFp-dC-tgy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="f8u-zN-rCk"/>
+                                <exclude reference="hgY-5o-uit"/>
+                                <exclude reference="uYc-pF-syF"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Pledge" id="x8b-ao-XoJ"/>
+                    <navigationItem key="navigationItem" title="Pledge" id="x8b-ao-XoJ">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="GMb-Lj-yNT">
+                            <connections>
+                                <action selector="closeButtonPressed:" destination="fbv-zz-eb6" id="SYX-5l-0sO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="campaignImageView" destination="AkC-as-0PC" id="Kru-ne-6EA"/>
+                        <outlet property="campaignOrganiserLabel" destination="bZ6-so-ri2" id="bwP-40-gIt"/>
+                        <outlet property="campaignTitleLabel" destination="jFK-ah-ByN" id="G5y-XH-1UI"/>
+                        <outlet property="donationSlider" destination="fdZ-jR-8sx" id="YKY-l0-TyW"/>
+                        <outlet property="donationValueLabel" destination="voo-qv-Crl" id="jGV-Ak-qZ0"/>
+                        <outlet property="pledgeButton" destination="v3g-IX-udZ" id="EbU-Ni-6yn"/>
+                        <outlet property="targetLabel" destination="C2l-vy-4VQ" id="Qet-Yk-oA2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cel-Sk-GQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
