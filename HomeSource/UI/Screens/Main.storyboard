@@ -11,6 +11,7 @@
         <scene sceneID="xno-Ok-r2O">
             <objects>
                 <navigationController id="1pO-nT-0Hw" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zb2-8G-vcB" customClass="HomeSourceNavigationBar" customModule="HomeSource" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -142,6 +143,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="USG-Df-pGR">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Klv-yS-noM">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="OeH-Z6-zXz" id="JdT-T6-3oh"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="HYe-UZ-hTO">
                             <connections>
                                 <action selector="doneButtonPressed:" destination="OeH-Z6-zXz" id="dGG-RH-Dlg"/>

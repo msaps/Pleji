@@ -48,6 +48,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func logoutButtonPressed(sender: AnyObject) {
+        HomeSourceService.instance().logout({success, error in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })
+    }
+    
     ///MARK: tableview
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,7 +65,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("historyCell", forIndexPath: indexPath) as! HistoryTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("historyCell", forIndexPath: indexPath) as! HistoryTableViewCell
         
         if let history = self.history {
             cell.userDontation = history[indexPath.row]
