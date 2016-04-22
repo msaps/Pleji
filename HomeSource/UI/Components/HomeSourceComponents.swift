@@ -85,7 +85,7 @@ public struct HomeSourceCircularProgressStyle : StyleProperty {
     
     // Base Circular
     public var baseLineWidth: CGFloat? = 4
-    public var baseArcColor: UIColor? = UIColor.whiteColor().colorWithAlphaComponent(0.6)
+    public var baseArcColor: UIColor? = UIColor.lightGrayColor().colorWithAlphaComponent(0.7)
     
     // Ratio
     public var ratioLabelFont: UIFont? = UIFont(name: "Verdana-Bold", size: 0)
