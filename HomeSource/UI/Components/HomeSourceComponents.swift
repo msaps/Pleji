@@ -76,12 +76,12 @@ public struct HomeSourceCircularProgressStyle : StyleProperty {
     public var progressSize: CGFloat = 80
     
     // Gradient Circular
-    public var arcLineWidth: CGFloat = 6
+    public var arcLineWidth: CGFloat = 4
     public var startArcColor: UIColor = UIColor.greenColor()
-    public var endArcColor: UIColor = UIColor.greenColor()
+    public var endArcColor: UIColor = UIColor.plejiGreen()
     
     // Base Circular
-    public var baseLineWidth: CGFloat? = 6
+    public var baseLineWidth: CGFloat? = 4
     public var baseArcColor: UIColor? = UIColor.whiteColor().colorWithAlphaComponent(0.6)
     
     // Ratio
