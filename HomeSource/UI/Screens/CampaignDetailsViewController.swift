@@ -91,6 +91,7 @@ class CampaignDetailsViewController: UIViewController, UICollectionViewDelegateF
             
             goalCell.titleLabel?.text = (goal.title).uppercaseString
             goalCell.goalLabel?.text = goal.getTargetString()
+            goalCell.typeLabel?.text = goal.getTypeString()
             
             var progressString: String
             if goal.current == goal.target {
@@ -187,7 +188,6 @@ class CampaignGoalCell: UICollectionViewCell {
     
     @IBOutlet var goalLabel: UILabel?
     
-    @IBOutlet var typeImage: UIImage?
     @IBOutlet var typeLabel: UILabel?
     
     @IBOutlet var progressLabel: UILabel?
@@ -230,7 +230,7 @@ public struct CampaignDetailsCircularProgressStyle : StyleProperty {
     // Gradient Circular
     public var arcLineWidth: CGFloat = 4
     public var startArcColor: UIColor = UIColor.greenColor()
-    public var endArcColor: UIColor = UIColor.greenColor()
+    public var endArcColor: UIColor = UIColor.plejiGreen()
     
     // Base Circular
     public var baseLineWidth: CGFloat? = 4
@@ -261,7 +261,7 @@ public struct CampaignDetailsProgressCellCircularProgressStyle : StyleProperty {
     // Gradient Circular
     public var arcLineWidth: CGFloat = 4
     public var startArcColor: UIColor = UIColor.greenColor()
-    public var endArcColor: UIColor = UIColor.greenColor()
+    public var endArcColor: UIColor = UIColor.plejiGreen()
     
     // Base Circular
     public var baseLineWidth: CGFloat? = 4

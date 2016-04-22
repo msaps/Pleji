@@ -63,4 +63,14 @@ class Goal: NSObject {
         return percentage
     }
     
+    func getTypeString() -> String {
+        switch self.donationType {
+        case .Material:
+            return "Material Donation"
+        case .Time:
+            return "Service Donation"
+        default:
+            return "Donation"
+        }
+    }
 }
