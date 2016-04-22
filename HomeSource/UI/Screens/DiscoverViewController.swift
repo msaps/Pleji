@@ -61,10 +61,12 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegateFlowLayo
         cell.backgroundImageView?.image = UIImage(named: "hero_image_header")
         cell.timeRemainingView?.date = campaign.endDate
         
+        let overallProgress = CGFloat(campaign.getOverallProgress() ?? 0)
+        
         let progress = GradientCircularProgress()
         let progressView = progress.showAtRatio(frame: cell.progressView!.bounds, display: true, style: HomeSourceCircularProgressStyle())
         progressView?.backgroundColor = UIColor.clearColor()
-        progress.updateRatio(0.4)
+        progress.updateRatio(overallProgress)
         cell.progressView?.addSubview(progressView!)
 
         return cell
