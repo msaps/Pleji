@@ -939,10 +939,10 @@
                                                                     <state key="normal" title="Pledge"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
-                                                                            <color key="value" red="0.25882352941176467" green="0.81568627450980391" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="value" red="0.36470588235294116" green="0.83921568627450982" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
-                                                                            <color key="value" red="0.20702773352829565" green="0.66182008861236796" blue="0.29881036715184472" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <color key="value" red="0.32650676362273995" green="0.75779246794871791" blue="0.41425397959140975" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </button>

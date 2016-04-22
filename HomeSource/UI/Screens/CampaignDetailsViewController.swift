@@ -230,7 +230,7 @@ public struct CampaignDetailsCircularProgressStyle : StyleProperty {
     // Gradient Circular
     public var arcLineWidth: CGFloat = 4
     public var startArcColor: UIColor = UIColor.greenColor()
-    public var endArcColor: UIColor = UIColor.greenColor()
+    public var endArcColor: UIColor = UIColor.plejiGreen()
     
     // Base Circular
     public var baseLineWidth: CGFloat? = 4
@@ -261,7 +261,7 @@ public struct CampaignDetailsProgressCellCircularProgressStyle : StyleProperty {
     // Gradient Circular
     public var arcLineWidth: CGFloat = 4
     public var startArcColor: UIColor = UIColor.greenColor()
-    public var endArcColor: UIColor = UIColor.greenColor()
+    public var endArcColor: UIColor = UIColor.plejiGreen()
     
     // Base Circular
     public var baseLineWidth: CGFloat? = 4
