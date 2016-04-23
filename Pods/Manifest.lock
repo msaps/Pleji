@@ -1,1 +1,30 @@
+PODS:
+  - DateTools (1.7.0)
+  - GradientCircularProgress (3.3.0)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - DateTools
+  - GradientCircularProgress (from `https://github.com/keygx/GradientCircularProgress`)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  GradientCircularProgress:
+    :git: https://github.com/keygx/GradientCircularProgress
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  GradientCircularProgress:
+    :commit: 46b44e9066dba34b4c5df588aee24f29a469ca93
+    :git: https://github.com/keygx/GradientCircularProgress
+  SwiftyJSON:
+    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  GradientCircularProgress: d197589486f78d49125761deb3643a77500edd27
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
 COCOAPODS: 0.39.0
