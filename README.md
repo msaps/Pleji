@@ -16,7 +16,7 @@ The full pitch keynote is available here: [Keynote](https://github.com/MerrickSa
 ### Prototype
 This repository contains the prototype iOS client. The code is in no way production ready, and there are some not so nice parts.
 
-Simple clone, build and run the workspace. Built for iOS 9.
+Simple clone, build and run the workspace. Written in Swift, built for iOS 9.
 
 ### Team
 Gary Butcher, Tengiz Meskhi, Merrick Sapsford
