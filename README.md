@@ -1,4 +1,6 @@
-# Business Rocks 2016 Hackathon Entry
+# Pleji
+
+Apadmi Team entry for Business Rocks 2016 Hackathon
 
 ### About BR2016 Hackathon
 How can technology help solve world homelessness? [Details](http://www.business-rocks.com/hackathon.html)
