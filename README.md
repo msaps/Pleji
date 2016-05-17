@@ -5,12 +5,12 @@ Apadmi Team entry for Business Rocks 2016 Hackathon
 ### About BR2016 Hackathon
 How can technology help solve world homelessness? [Details](http://www.business-rocks.com/hackathon.html)
 
-## Pleji
+### Concept
+
 <div style="width:100%;">
 <img src="resources/Pledji.png" align="center" height="50%" width="50%" style="margin-left:20px;">
 </div> 
 
-### Concept
 Pleji is a crowd-source based solution for correcting the imbalance of supply and demand that all homeless-centric charities face. Using Pleji; charities are able to create effective donation campaigns, whether it be for material, services or finance. Pleji users are then able to pledge whatever they can to help the cause.
 
 The full pitch keynote is available here: [Keynote](https://github.com/MerrickSapsford/BR2016-Hack/blob/develop/Keynote.key)
